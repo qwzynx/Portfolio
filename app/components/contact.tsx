@@ -77,7 +77,7 @@ export default function Contact() {
         {/* ─── RIGHT SIDE: Linux Terminal Contact Form ─── */}
         <div className="flex-1 w-full max-w-xl group">
           {/* Gradient border wrapper — matching hero code block */}
-          <div className="relative p-[2px] rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:shadow-[0_0_40px_rgba(139,92,246,0.5)] transition-all duration-500 group-hover:scale-[1.01]">
+          <div className="relative p-[1px] rounded-xl bg-white/10 hover:shadow-[0_0_40px_rgba(139,92,246,0.15)] transition-all duration-500 group-hover:scale-[1.01]">
             <div className="bg-[#0f111a] rounded-[10px] overflow-hidden h-full w-full">
               {/* ─── Linux Title Bar ─── */}
               <div className="flex justify-between items-center border-b border-gray-800/60 px-4 py-2">

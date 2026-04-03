@@ -58,7 +58,7 @@ export default function Hero() {
 
       {/* Right side: Interactive Code Block Box */}
       <div className="flex-1 w-full max-w-xl group perspective z-10">
-        <div className="relative p-[2px] rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:shadow-[0_0_40px_rgba(139,92,246,0.5)] transition-all duration-500 group-hover:scale-[1.02] -rotate-2 group-hover:rotate-0">
+        <div className="relative p-[1px] rounded-xl bg-white/10 hover:shadow-[0_0_40px_rgba(139,92,246,0.15)] transition-all duration-500 group-hover:scale-[1.02] -rotate-2 group-hover:rotate-0">
           <div className="bg-[#0f111a] rounded-[10px] p-6 text-sm md:text-base font-mono leading-loose tracking-wide h-full w-full">
             {/* Windows Window Controls */}
             <div className="flex justify-between items-center mb-4 border-b border-gray-800/60 pb-2 -mt-2 -mx-2 px-2">
