@@ -2,43 +2,53 @@ import React from "react";
 
 const experiences = [
   {
-    role: "Senior Software Engineer",
-    company: "Tech Innovators",
-    date: "2023 - Present",
-    location: "Remote",
-    description: "Spearheaded the development of a highly scalable web application using Next.js and React.",
+    role: "Digital Marketing & Web Lead",
+    company: "ZUIX INC.",
+    date: "Sep 2024 - Present",
+    location: "Ontario, Canada · Hybrid",
+    description: "Designed, developed, and launched the company's first official website (www.zuix.ca) , establishing its digital footprint by utilizing modern web frameworks like Next.js and React.",
     bullets: [
-      "Integrated advanced data handling patterns, reducing load times by 40%",
-      "Led a team of 5 engineers to deliver product features ahead of schedule",
-      "Architected reusable component libraries adopted across 3 products",
+      "Directed end-to-end content creation by shooting, editing, and publishing high-quality photo and video assets to establish the brand's foundational social media presence.",
+      "Advised company leadership on social media strategy, providing constructive feedback on content creation to improve overall quality and brand consistency."
     ],
-    tech: ["Next.js", "React", "TypeScript"]
+    tech: ["Next.js", "React"]
   },
   {
-    role: "Full Stack Developer",
-    company: "Digital Dynamics",
-    date: "2021 - 2023",
-    location: "Hybrid",
-    description: "Architected back-end solutions using Python and Supabase for robust real-time applications.",
+    role: "Visual Content Creator",
+    company: "F.O.R.M. Basketball Academy",
+    date: "Nov 2025 - Jan 2026",
+    location: "Toronto, Ontario, Canada · On-site",
+    description: "Directed end-to-end media production for FORM Basketball Academy during their high-stakes matchup against the University of Toronto and team training sessions at the OVO Athletic Centre.",
     bullets: [
-      "Built real-time synchronized dashboards for 10k+ concurrent users",
-      "Worked with design teams to transition wireframes into code",
-      "Reduced API response time by 60% through caching and query optimization",
+      "Captured and edited dynamic, high-quality photography and videography, tailoring the final assets to the client's brand and vision.",
+      "Delivered highly engaging sports content that was successfully leveraged across the academy's official social media channels to drive audience engagement."
     ],
-    tech: ["Python", "Supabase", "Tailwind CSS"]
+    tech: ["Photography", "Videography", "Media Production"]
   },
   {
-    role: "Software Developer",
-    company: "Creative Solutions Ltd.",
-    date: "2019 - 2021",
-    location: "On-site",
-    description: "Developed modular front-end components and automated deployment workflows.",
+    role: "Computer Science Tutor",
+    company: "Bayview Secondary School",
+    date: "Sep 2023 - Jul 2025",
+    location: "Richmond Hill, Ontario, Canada · On-site",
+    description: "Conducted one-on-one tutoring sessions, identifying student knowledge gaps to provide targeted solutions and improve comprehension.",
     bullets: [
-      "Built and shipped 15+ reusable UI components in vanilla JS and HTML/CSS",
-      "Automated CI/CD pipelines on Arch Linux servers cutting deploy time in half",
-      "Improved cross-browser compatibility across all major browsers",
+      "Developed connections with peers through active listening, patience, and empathetic communication.",
+      "Tracked student progress over time, adapting lesson plans to overcome learning challenges and drive positive academic outcomes."
     ],
-    tech: ["JavaScript", "HTML/CSS", "Arch Linux"]
+    tech: ["Teaching", "Mentoring"]
+  },
+  {
+    role: "STEM Instructor",
+    company: "Envision Robotics STEM Education Inc.",
+    date: "Dec 2024 - Mar 2025",
+    location: "Markham, Ontario, Canada · On-site",
+    description: "Facilitated interactive STEM workshops for youth, translating complex robotics, 3D printing, and coding concepts into accessible lessons.",
+    bullets: [
+      "Assessed individual learning styles and adjusted teaching methods dynamically to deliver tailored educational solutions.",
+      "Maintained and troubleshot technical equipment in real-time, preventing classroom disruptions.",
+      "Built rapport with students and parents through clear communication, fostering a supportive learning environment."
+    ],
+    tech: ["Robotics", "3D Printing", "Python", "Coding"]
   }
 ];
 
