@@ -14,21 +14,21 @@ export default function Navbar() {
       {/* Primary Links */}
       <div className="flex flex-col gap-8 items-center text-gray-300">
         <Link 
-          href="/" 
+          href="#experience" 
           className="hover:text-white transition-colors duration-300 tracking-widest text-sm font-medium"
           style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
         >
-          Home
+          Experience
         </Link>
         <Link 
-          href="/projects" 
+          href="#projects" 
           className="hover:text-white transition-colors duration-300 tracking-widest text-sm font-medium"
           style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
         >
           Projects
         </Link>
         <Link 
-          href="/contact" 
+          href="#contact" 
           className="hover:text-white transition-colors duration-300 tracking-widest text-sm font-medium"
           style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}
         >
