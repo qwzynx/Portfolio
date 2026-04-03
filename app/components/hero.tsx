@@ -56,53 +56,19 @@ export default function Hero() {
         </p>
       </div>
 
-      {/* Right side: Interactive Code Block Box */}
-      <div className="flex-1 w-full max-w-xl group perspective z-10">
-        <div className="relative p-[1px] rounded-xl bg-white/10 hover:shadow-[0_0_40px_rgba(139,92,246,0.15)] transition-all duration-500 group-hover:scale-[1.02] -rotate-2 group-hover:rotate-0">
-          <div className="bg-[#0f111a] rounded-[10px] p-6 text-sm md:text-base font-mono leading-loose tracking-wide h-full w-full">
-            {/* Windows Window Controls */}
-            <div className="flex justify-between items-center mb-4 border-b border-gray-800/60 pb-2 -mt-2 -mx-2 px-2">
-              <div className="text-xs text-gray-500 font-sans tracking-tight">developer.js</div>
-              <div className="flex items-center">
-                <div className="w-8 h-8 flex items-center justify-center hover:bg-white/10 text-gray-400 transition-colors cursor-pointer rounded-sm">
-                  <svg width="10" height="1" viewBox="0 0 10 1" fill="currentColor"><rect width="10" height="1" /></svg>
-                </div>
-                <div className="w-8 h-8 flex items-center justify-center hover:bg-white/10 text-gray-400 transition-colors cursor-pointer rounded-sm">
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor"><rect x="0.5" y="0.5" width="9" height="9" /></svg>
-                </div>
-                <div className="w-8 h-8 flex items-center justify-center hover:bg-red-500 hover:text-white text-gray-400 transition-colors cursor-pointer rounded-sm">
-                  <svg width="10" height="10" viewBox="0 0 10 10" fill="currentColor"><path d="M1 0.292969L0.292969 1L4.29297 5L0.292969 9L1 9.70703L5 5.70703L9 9.70703L9.70703 9L5.70703 5L9.70703 1L9 0.292969L5 4.29297L1 0.292969Z"/></svg>
-                </div>
-              </div>
+      {/* Right side: Portrait Circle */}
+      <div className="flex-1 w-full max-w-xl flex justify-center items-center z-10 perspective">
+        <div className="relative group w-64 h-64 md:w-80 md:h-80 lg:w-104 lg:h-104">
+          {/* Animated Glow Behind */}
+          <div className="absolute -inset-2 rounded-full bg-blue-500 opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
+          
+          {/* The Circle Container */}
+          <div className="relative w-full h-full rounded-full p-[3px] bg-blue-500 shadow-2xl group-hover:scale-[1.02] hover:-rotate-1 transition-all duration-500">
+            <div className="w-full h-full rounded-full bg-[#0a0a0a] flex flex-col items-center justify-center overflow-hidden border-[6px] border-[#0a0a0a] relative group-hover:border-blue-500/10 transition-colors duration-500">
+              
+              {/* To add your portrait here, you can uncomment and use the img tag: */}
+              <img src="portrait.jpg" alt="Mahan Ghafarian" className="w-full h-full object-cover object-[center_30%]" />
             </div>
-            <p>
-              <span className="text-blue-400">const</span>{' '}
-              <span className="text-white">developer</span>{' '}
-              <span className="text-blue-400">=</span>{' '}
-              <span className="text-yellow-300">{'{'}</span>
-            </p>
-            <div className="pl-6">
-              <p>
-                <span className="text-purple-300">name</span>: <span className="text-green-300">&apos;Mahan Ghafarian&apos;</span>,
-              </p>
-              <p>
-                <span className="text-purple-300">skills</span>: <span className="text-blue-300">[</span>
-              </p>
-              <div className="pl-6 text-green-300">
-                &apos;React&apos;, &apos;TypeScript&apos;, &apos;Next.js&apos;,<br/>
-                &apos;Python&apos;, &apos;TailwindCSS&apos;, &apos;Node.js&apos;
-              </div>
-              <p>
-                <span className="text-blue-300">]</span>,
-              </p>
-              <p>
-                <span className="text-purple-300">hardWorker</span>: <span className="text-orange-400">true</span>,
-              </p>
-              <p>
-                <span className="text-purple-300">quickLearner</span>: <span className="text-orange-400">true</span>
-              </p>
-            </div>
-            <p className="text-yellow-300">{'};'}</p>
           </div>
         </div>
       </div>
