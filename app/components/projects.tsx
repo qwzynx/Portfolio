@@ -14,6 +14,17 @@ const projects = [
     gradient: "from-blue-500 to-indigo-400",
     github: "", // No explicit GitHub link provided yet
     live: "https://undercut-seven.vercel.app/",
+  },
+  {
+    title: "GradeMatrix",
+    date: "March 2026",
+    description:
+      "A modern, intuitive grade calculator designed to help students track their academic progress. It allows users to easily input assignments, manage course weights, and calculate their current standing or target grades.",
+    image: "/GradeMatrix.png",
+    tech: ["Next.js", "React", "TypeScript", "TailwindCSS"],
+    gradient: "from-purple-500 to-indigo-500",
+    github: "https://github.com/qwzynx/GradeCalc",
+    live: "https://grade-calc-nine.vercel.app",
   }
 ];
 
