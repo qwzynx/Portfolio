@@ -29,18 +29,27 @@ export default function Skills() {
         <p className="text-gray-400 mt-1 text-sm italic">I use arch btw</p>
       </div>
       
-      <div className="flex flex-wrap justify-center gap-4 max-w-5xl">
-        {skills.map((skill, index) => (
-          <div 
-            key={index} 
-            className="flex flex-col items-center justify-center p-4 bg-[#1e2029]/80 backdrop-blur-sm border border-white/5 rounded-2xl w-28 h-28 hover:-translate-y-2 hover:bg-[#252836] hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:border-white/10 transition-all duration-300 group cursor-default"
-          >
-            <div className={`text-4xl ${skill.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center h-10`}>
-              <skill.icon />
-            </div>
-            <span className="text-xs font-semibold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-wide">
-              {skill.name}
-            </span>
+      <div className="flex flex-col items-center gap-4 max-w-5xl">
+        {[
+          skills.slice(0, 4),
+          skills.slice(4, 7),
+          skills.slice(7, 9),
+          skills.slice(9, 10),
+        ].map((row, rowIndex) => (
+          <div key={rowIndex} className="flex flex-wrap justify-center gap-6">
+            {row.map((skill, index) => (
+              <div 
+                key={index} 
+                className="flex flex-col items-center justify-center p-4 bg-[#1e2029]/80 backdrop-blur-sm border border-white/5 rounded-2xl w-28 h-28 hover:-translate-y-2 hover:bg-[#252836] hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:border-white/10 transition-all duration-300 group cursor-default"
+              >
+                <div className={`text-4xl ${skill.color} mb-3 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center h-10`}>
+                  <skill.icon />
+                </div>
+                <span className="text-xs font-semibold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-wide">
+                  {skill.name}
+                </span>
+              </div>
+            ))}
           </div>
         ))}
       </div>
