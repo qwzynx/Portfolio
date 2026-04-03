@@ -38,7 +38,7 @@ function Typewriter({ words }: { words: string[] }) {
 
 export default function Hero() {
   return (
-    <section id="home" className="w-full min-h-[calc(100vh-200px)] flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 pt-20 px-4 md:px-12">
+    <section id="home" className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 px-4 md:px-12">
       {/* Left side: Text & Description */}
       <div className="flex-1 flex flex-col items-start z-10 max-w-2xl">
         <p className="text-xl text-gray-400 mb-1">Hello, I&apos;m</p>
