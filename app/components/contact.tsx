@@ -14,17 +14,37 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate sending
-    await new Promise((r) => setTimeout(r, 1500));
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/mahan207gh@gmail.com", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+          _subject: `New Portfolio Contact from ${name}`,
+        })
+      });
 
-    setSubmitted(true);
-    setIsSubmitting(false);
-    setTimeout(() => {
-      setSubmitted(false);
-      setName("");
-      setEmail("");
-      setMessage("");
-    }, 3000);
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setName("");
+          setEmail("");
+          setMessage("");
+        }, 3000);
+      } else {
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
