@@ -49,11 +49,11 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       {/* Content */}
       <div className="mt-4">
         {/* Title row with icons */}
-        <div className="flex bg-transparent items-center gap-3 mb-1">
+        <div className="flex items-start justify-between gap-3 mb-1">
           <span className="text-xl font-bold text-white leading-tight">
             {project.title}
           </span>
-          <div className="flex items-center gap-2 ml-auto">
+          <div className="flex items-center gap-3 shrink-0">
             {project.github && (
               <a
                 href={project.github}
@@ -62,7 +62,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                 className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label={`${project.title} GitHub`}
               >
-                <FaGithub size={22} />
+                <FaGithub size={20} />
               </a>
             )}
             {project.live && (
@@ -73,7 +73,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                 className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label={`${project.title} Live Demo`}
               >
-                <HiExternalLink size={24} />
+                <HiExternalLink size={22} />
               </a>
             )}
           </div>

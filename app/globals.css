@@ -13,11 +13,9 @@
   --font-heading: 'Cal Sans', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
 }
 
 html {
@@ -33,6 +31,20 @@ body {
   color: var(--foreground);
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.writing-v-rl {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+  .writing-v-rl {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
 }
 
 h1, h2, h3, h4, h5 {

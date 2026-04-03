@@ -38,19 +38,19 @@ function Typewriter({ words }: { words: string[] }) {
 
 export default function Hero() {
   return (
-    <section id="home" className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 px-4 md:px-12">
+    <section id="home" className="w-full min-h-screen flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 px-6 md:px-12 py-20 lg:py-0">
       {/* Left side: Text & Description */}
-      <div className="flex-1 flex flex-col items-start z-10 max-w-2xl">
-        <p className="text-xl text-gray-400 mb-1">Hello, I&apos;m</p>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white">
-          MAHAN<br className="hidden md:block"/> GHAFARIAN
+      <div className="flex-1 flex flex-col items-start z-10 max-w-2xl w-full">
+        <p className="text-lg md:text-xl text-gray-400 mb-1">Hello, I&apos;m</p>
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[1.1]">
+          MAHAN<br className="hidden sm:block"/> GHAFARIAN
         </h1>
         
-        <div className="text-xl md:text-2xl text-gray-300 mt-2 mb-3">
+        <div className="text-lg md:text-2xl text-gray-300 mt-4 mb-4">
           I&apos;m a <Typewriter words={["Software Developer.", "Creative Engineer.", "Tech Enthusiast."]} />
         </div>
         
-        <p className="text-gray-400 max-w-lg leading-relaxed text-lg">
+        <p className="text-gray-400 max-w-lg leading-relaxed text-base md:text-lg">
           I specialize in bridging the gap between elegant design and robust engineering, 
           building scalable applications that deliver exceptional user experiences.
         </p>
@@ -58,7 +58,7 @@ export default function Hero() {
 
       {/* Right side: Portrait Circle */}
       <div className="flex-1 w-full max-w-xl flex justify-center items-center z-10 perspective">
-        <div className="relative group w-64 h-64 md:w-80 md:h-80 lg:w-104 lg:h-104">
+        <div className="relative group w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-104 lg:h-104">
           {/* Animated Glow Behind */}
           <div className="absolute -inset-2 rounded-full bg-blue-500 opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
           

@@ -56,12 +56,12 @@ function Card({ exp }: { exp: typeof experiences[0] }) {
   return (
     <div className="bg-white/[0.03] backdrop-blur-md border border-white/8 rounded-2xl p-5 hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300 group w-full">
       {/* Header */}
-      <div className="flex items-start justify-between gap-2 mb-1">
-        <div>
+      <div className="flex flex-col sm:flex-row items-start justify-between gap-3 sm:gap-2 mb-1">
+        <div className="w-full sm:w-auto">
           <h3 className="text-base font-bold text-white leading-tight">{exp.role}</h3>
           <p className="text-sm text-blue-400 font-medium mt-0.5">{exp.company}</p>
         </div>
-        <div className="text-right shrink-0 text-xs text-gray-500">
+        <div className="sm:text-right shrink-0 text-xs text-gray-500 w-full sm:w-auto mt-1 sm:mt-0">
           <div>{exp.date}</div>
           <div className="text-gray-600 mt-0.5">{exp.location}</div>
         </div>
@@ -111,25 +111,36 @@ export default function Experience() {
         {experiences.map((exp, index) => {
           const isLeft = index % 2 === 0;
           return (
-            <div key={index} className="relative md:-mb-30 mb-2 flex md:items-start w-full last:mb-0">
-
-              {/* LEFT SIDE */}
-              <div className={`w-full md:w-[calc(50%-20px)] ${isLeft ? "md:pr-6" : "md:invisible"}`}>
-                {isLeft && <Card exp={exp} />}
+            <div key={index} className="relative mb-8 md:mb-0 flex md:items-start w-full">
+              {/* Desktop View */}
+              <div className="hidden md:flex flex-1 justify-end">
+                {isLeft ? (
+                  <div className="w-full pr-8">
+                    <Card exp={exp} />
+                  </div>
+                ) : (
+                  <div className="w-full" />
+                )}
               </div>
 
-              {/* Center Dot */}
-              <div className="hidden md:flex shrink-0 w-14 items-start justify-center pt-4">
-                <span className="h-3 w-3 rounded-full bg-blue-500/60 ring-4 ring-[#0a0a0a] shadow-[0_0_10px_rgba(59,130,246,0.3)]" />
+              {/* Center Dot - Desktop Only */}
+              <div className="hidden md:flex shrink-0 w-14 items-start justify-center pt-8">
+                <span className="h-3 w-3 rounded-full bg-blue-500/60 ring-4 ring-[#0a0a0a] shadow-[0_0_10px_rgba(59,130,246,0.3)] z-20" />
               </div>
 
-              {/* RIGHT SIDE */}
-              <div className={`w-full md:w-[calc(50%-20px)] ${!isLeft ? "md:pl-6" : "md:invisible"}`}>
-                {!isLeft && <Card exp={exp} />}
+              <div className="hidden md:flex flex-1 justify-start">
+                {!isLeft ? (
+                  <div className="w-full pl-8">
+                    <Card exp={exp} />
+                  </div>
+                ) : (
+                  <div className="w-full" />
+                )}
               </div>
 
-              {/* Mobile: always full width */}
-              <div className="md:hidden w-full">
+              {/* Mobile View */}
+              <div className="md:hidden flex-1 relative pl-8 border-l border-white/10 ml-4 mr-2">
+                <span className="absolute left-[-6px] top-6 h-3 w-3 rounded-full bg-blue-500/60 ring-4 ring-[#0a0a0a]" />
                 <Card exp={exp} />
               </div>
             </div>
