@@ -24,12 +24,12 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       <div
         className={`relative p-[3px] rounded-xl bg-linear-to-br ${project.gradient} shadow-lg group-hover:shadow-2xl transition-shadow duration-500`}
       >
-        <div className="rounded-[9px] overflow-hidden bg-[#0a0a0a] aspect-[4/3]">
+        <div className="rounded-[9px] overflow-hidden bg-[#0a0a0a] aspect-video">
           <Image
             src={project.image}
             alt={project.title}
-            width={600}
-            height={450}
+            width={640}
+            height={360}
             className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
           />
         </div>
