@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { HiExternalLink } from "react-icons/hi";
@@ -30,7 +33,7 @@ const projects = [
 
 function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   return (
-    <div className="w-full max-w-md group bg-white/[0.03] backdrop-blur-md border border-white/8 rounded-2xl p-4 hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300 mx-auto">
+    <div className="w-full max-w-md group bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-4 hover:bg-white/[0.06] hover:border-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(255,255,255,0.1)] mx-auto">
       {/* Image with gradient border */}
       <div
         className={`relative p-[3px] rounded-xl bg-linear-to-br ${project.gradient} shadow-lg group-hover:shadow-2xl transition-shadow duration-500`}
@@ -41,16 +44,16 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
             alt={project.title}
             width={640}
             height={360}
-            className="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-500"
+            className="w-full h-full object-cover group-hover:scale-[1.05] group-hover:rotate-1 transition-all duration-700 opacity-90 group-hover:opacity-100"
           />
         </div>
       </div>
 
       {/* Content */}
-      <div className="mt-4">
+      <div className="mt-5">
         {/* Title row with icons */}
         <div className="flex items-start justify-between gap-3 mb-1">
-          <span className="text-xl font-bold text-white leading-tight">
+          <span className="text-xl font-bold text-white leading-tight group-hover:text-blue-400 transition-colors duration-300">
             {project.title}
           </span>
           <div className="flex items-center gap-3 shrink-0">
@@ -70,7 +73,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white transition-colors duration-200"
+                className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                 aria-label={`${project.title} Live Demo`}
               >
                 <HiExternalLink size={22} />
@@ -80,10 +83,10 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
         </div>
         
         {/* Date */}
-        <p className="text-xs text-blue-400 font-medium mb-3">{project.date}</p>
+        <p className="text-xs text-blue-400/80 font-semibold tracking-wide mb-3">{project.date}</p>
 
         {/* Description */}
-        <p className="text-gray-400 text-sm leading-relaxed mb-4">
+        <p className="text-gray-400 text-sm leading-relaxed mb-5">
           {project.description}
         </p>
 
@@ -92,7 +95,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
           {project.tech.map((techItem, idx) => (
             <span
               key={idx}
-              className="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400 border border-white/8 hover:bg-white/10 hover:text-gray-300 transition-colors duration-200"
+              className="px-3 py-1 bg-white/5 rounded-full text-[10px] font-semibold tracking-wider uppercase text-gray-300 border border-white/10 group-hover:border-white/20 transition-colors duration-300"
             >
               {techItem}
             </span>
@@ -105,16 +108,31 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="w-full py-20 px-4 md:px-12 flex flex-col items-center z-10 relative">
-      <div className="flex flex-col items-center mb-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight text-center">
+    <section id="projects" className="w-full py-8 px-6 md:px-16 flex flex-col items-center justify-center z-10 relative max-w-7xl mx-auto">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-col items-center mb-12 relative group"
+      >
+        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-center leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
           Projects
         </h2>
-      </div>
+        <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-center">Recent work</p>
+      </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} />
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+          >
+            <ProjectCard project={project} />
+          </motion.div>
         ))}
       </div>
     </section>

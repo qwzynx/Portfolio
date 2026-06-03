@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 import { FaPython, FaJava, FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import { SiJavascript, SiArchlinux, SiSupabase, SiNextdotjs } from "react-icons/si";
 
@@ -21,27 +24,40 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="w-full py-20 px-4 md:px-12 flex flex-col items-center justify-center z-10 relative">
-      <div className="flex flex-col items-center mb-4">
-        <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight text-center">
-          Skills
+    <section id="skills" className="w-full py-10 px-6 md:px-16 flex flex-col items-center justify-center z-10 relative max-w-7xl mx-auto">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-col items-center mb-12 relative group"
+      >
+        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-center leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white">
+          SKILLS
         </h2>
-        <p className="text-gray-400 mt-1 text-sm italic">I use arch btw</p>
-      </div>
+        <p className="text-blue-400 mt-4 text-sm md:text-base italic font-semibold tracking-widest uppercase text-center">I use arch btw</p>
+      </motion.div>
       
-      <div className="flex flex-wrap justify-center gap-4 sm:gap-6 max-w-5xl">
+      <div className="flex flex-wrap justify-center gap-4 sm:gap-5 max-w-4xl">
         {skills.map((skill, index) => (
-          <div 
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: index * 0.05 }}
             key={index} 
-            className="flex flex-col items-center justify-center p-3 sm:p-4 bg-[#1e2029]/80 backdrop-blur-sm border border-white/5 rounded-2xl w-24 h-24 sm:w-28 sm:h-28 hover:-translate-y-2 hover:bg-[#252836] hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:border-white/10 transition-all duration-300 group cursor-default"
+            className="group relative flex flex-col items-center justify-center p-3 sm:p-4 w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-white/[0.02] backdrop-blur-xl border border-white/10 hover:bg-white/[0.05] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_35px_-10px_rgba(255,255,255,0.1)] overflow-hidden cursor-default"
           >
-            <div className={`text-3xl sm:text-4xl ${skill.color} mb-2 sm:mb-3 group-hover:scale-110 transition-transform duration-300 flex items-center justify-center h-10`}>
+            {/* Hover Glow Background */}
+            <div className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            
+            <div className={`relative z-10 text-3xl sm:text-4xl ${skill.color} mb-2 sm:mb-3 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300 drop-shadow-lg flex items-center justify-center h-10`}>
               <skill.icon />
             </div>
-            <span className="text-[10px] sm:text-xs font-semibold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-wide text-center">
+            <span className="relative z-10 text-[10px] sm:text-xs font-semibold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-wide text-center uppercase">
               {skill.name}
             </span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

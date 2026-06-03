@@ -145,30 +145,43 @@ export default function Experience() {
   const [selectedExp, setSelectedExp] = useState<ExperienceData | null>(null);
 
   return (
-    <section id="experience" className="w-full py-24 px-4 md:px-12 flex flex-col items-center relative overflow-hidden">
+    <section id="experience" className="w-full py-8 flex flex-col items-center relative overflow-hidden max-w-7xl mx-auto px-6 md:px-16">
       {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-linear-to-tr from-blue-600/10 to-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="max-w-6xl w-full">
-        <div className="flex flex-col items-center mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
+      <div className="w-full flex flex-col items-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col items-center mb-16 relative group"
+        >
+          <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-center leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
             Experience
           </h2>
-          <p className="text-gray-400 max-w-lg text-sm">
-            Professional journey and technical contributions across diverse industries.
+          <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-center">
+            Professional journey
           </p>
-        </div>
+        </motion.div>
 
         {/* Timeline Container */}
         <div className="relative w-full">
           {/* Vertical center line */}
-          <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/10 -translate-x-1/2 hidden md:block" />
+          <div className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-linear-to-b from-blue-500/0 via-blue-500/20 to-purple-500/0 -translate-x-1/2 hidden md:block" />
 
           <div className="space-y-4 md:space-y-0">
             {experiences.map((exp, index) => {
               const isLeft = index % 2 === 0;
               return (
-                <div key={index} className="relative flex md:items-center w-full min-h-[50px] md:py-1">
+                <motion.div 
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  key={index} 
+                  className="relative flex md:items-center w-full min-h-[50px] md:py-2"
+                >
                   {/* Desktop View */}
                   <div className="hidden md:flex flex-1 justify-end">
                     {isLeft ? (
@@ -182,7 +195,7 @@ export default function Experience() {
 
                   {/* Center Dot - Desktop Only */}
                   <div className="hidden md:flex shrink-0 w-12 items-center justify-center relative z-20">
-                    <span className="h-3 w-3 rounded-full bg-blue-500/60 ring-4 ring-[#0a0a0a] shadow-[0_0_15px_rgba(59,130,246,0.4)] transition-transform duration-300 group-hover:scale-125" />
+                    <span className="h-4 w-4 rounded-full bg-linear-to-tr from-blue-500 to-purple-500 ring-4 ring-[#0a0a0a] shadow-[0_0_20px_rgba(59,130,246,0.6)] transition-transform duration-500 group-hover:scale-150" />
                   </div>
 
                   <div className="hidden md:flex flex-1 justify-start">
@@ -196,13 +209,13 @@ export default function Experience() {
                   </div>
 
                   {/* Mobile View */}
-                  <div className="md:hidden flex-1 relative pl-10 border-l border-white/10 ml-4 mb-4">
-                    <span className="absolute left-[-6.5px] top-8 h-3 w-3 rounded-full bg-blue-500/60 ring-4 ring-[#0a0a0a]" />
+                  <div className="md:hidden flex-1 relative pl-10 border-l-2 border-blue-500/20 ml-4 mb-6">
+                    <span className="absolute left-[-9px] top-8 h-4 w-4 rounded-full bg-linear-to-tr from-blue-500 to-purple-500 ring-4 ring-[#0a0a0a] shadow-[0_0_15px_rgba(59,130,246,0.5)]" />
                     <div className="max-w-full">
                       <ExperienceCard exp={exp} onClick={() => setSelectedExp(exp)} />
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>

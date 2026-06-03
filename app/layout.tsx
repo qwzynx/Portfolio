@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased dark">
+    <html lang="en" className="h-full antialiased dark scroll-smooth snap-y snap-proximity">
       <body className="min-h-full flex bg-background text-foreground">
         <Navbar />
         <main className="flex-1 pl-0 md:pl-20 overflow-x-hidden">

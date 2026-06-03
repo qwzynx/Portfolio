@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 import { FaEnvelope, FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
@@ -50,120 +51,130 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full py-20 px-4 md:px-12 flex flex-col items-center z-10 relative"
+      className="w-full py-10 px-6 md:px-16 flex flex-col items-center justify-center z-10 relative overflow-hidden max-w-7xl mx-auto"
     >
+      {/* Background glow */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-linear-to-tr from-blue-600/5 to-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
+
       {/* Section heading */}
-      <div className="flex flex-col items-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight text-center">
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-col items-center mb-16 relative group"
+      >
+        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-center leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
           Contact
         </h2>
-      </div>
+        <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-center">Get in touch</p>
+      </motion.div>
 
-      <div className="w-full max-w-5xl flex flex-col lg:flex-row gap-10 lg:gap-16 items-stretch">
+      <div className="w-full max-w-5xl flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch relative z-10">
         {/* ─── LEFT SIDE ─── */}
         <div className="flex-1 flex flex-col justify-center">
           <h3
-            className="text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight mb-6"
-            style={{ fontFamily: "Cal Sans, sans-serif" }}
+            className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1] mb-8 text-white drop-shadow-sm"
           >
-            Ready to bring your
-            <br />
-            vision to life?
+            Ready to bring your<br />
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">vision to life?</span>
           </h3>
 
-          <p className="text-gray-400 leading-relaxed mb-8 max-w-md">
-            Great products start with a simple conversation. Whether you&apos;re looking to build something from scratch or elevate an existing project, let&apos;s collaborate and make it a success.
+          <p className="text-gray-400 leading-relaxed mb-10 max-w-md text-lg">
+            Great products start with a simple conversation. Let&apos;s collaborate and make it a success.
           </p>
 
           {/* Email info */}
-          <div className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/8 flex items-center justify-center group-hover:bg-white/[0.08] group-hover:border-white/15 transition-all duration-300">
-              <FaEnvelope className="text-blue-400" size={16} />
+          <div className="flex items-center gap-4 group cursor-default">
+            <div className="w-12 h-12 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center group-hover:bg-blue-500/10 group-hover:border-blue-500/30 transition-all duration-500 shadow-lg">
+              <FaEnvelope className="text-blue-400 group-hover:scale-110 transition-transform duration-300" size={20} />
             </div>
             <div>
-              <p className="text-xs text-gray-500 uppercase tracking-widest font-semibold">Email</p>
-              <p className="text-gray-300 text-sm">mahan207gh@gmail.com</p>
+              <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mb-0.5">Direct Email</p>
+              <p className="text-gray-200 font-medium group-hover:text-blue-400 transition-colors duration-300">mahan207gh@gmail.com</p>
             </div>
           </div>
         </div>
 
         {/* ─── RIGHT SIDE: Contact Form ─── */}
         <div className="flex-1 w-full max-w-lg">
-          <form
-            onSubmit={handleSubmit}
-            className="bg-white/[0.03] backdrop-blur-md border border-white/8 rounded-2xl p-6 md:p-8 hover:bg-white/[0.05] hover:border-white/15 transition-all duration-300 space-y-5"
-          >
-            {/* Name */}
-            <div>
-              <label className="block text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Your name"
-                required
-                className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-400/50 focus:bg-white/[0.06] transition-all duration-300"
-              />
-            </div>
-
-            {/* Email */}
-            <div>
-              <label className="block text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">
-                Email
-              </label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="your@email.com"
-                required
-                className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-400/50 focus:bg-white/[0.06] transition-all duration-300"
-              />
-            </div>
-
-            {/* Message */}
-            <div>
-              <label className="block text-xs text-gray-500 uppercase tracking-widest font-semibold mb-2">
-                Message
-              </label>
-              <textarea
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Tell me about your project..."
-                required
-                rows={5}
-                className="w-full bg-white/[0.04] border border-white/8 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder-gray-600 outline-none resize-none focus:border-blue-400/50 focus:bg-white/[0.06] transition-all duration-300"
-              />
-            </div>
-
-            {/* Submit */}
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className={`w-full py-3 rounded-xl text-sm font-semibold tracking-wide flex items-center justify-center gap-2 transition-all duration-300 cursor-pointer
-                ${
-                  submitted
-                    ? "bg-green-500/20 text-green-400 border border-green-400/30"
-                    : isSubmitting
-                    ? "bg-white/5 text-gray-500 border border-white/8 cursor-wait"
-                    : "bg-blue-500/15 text-blue-400 border border-blue-400/30 hover:bg-blue-500/25 hover:border-blue-400/50 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)]"
-                }
-              `}
+          <div className="relative p-[1px] rounded-3xl bg-linear-to-br from-white/10 to-transparent transition-all duration-700">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-white/[0.02] backdrop-blur-3xl rounded-[23px] p-8 md:p-10 space-y-6 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
             >
-              {submitted ? (
-                <>Sent Successfully ✓</>
-              ) : isSubmitting ? (
-                <>Sending...</>
-              ) : (
-                <>
-                  <FaPaperPlane size={14} />
-                  Send Message
-                </>
-              )}
-            </button>
-          </form>
+              {/* Name */}
+              <div className="space-y-2">
+                <label className="block text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold px-1">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Your name"
+                  required
+                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-500/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
+                />
+              </div>
+
+              {/* Email */}
+              <div className="space-y-2">
+                <label className="block text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold px-1">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="your@email.com"
+                  required
+                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-500/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
+                />
+              </div>
+
+              {/* Message */}
+              <div className="space-y-2">
+                <label className="block text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold px-1">
+                  Message
+                </label>
+                <textarea
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Tell me about your project..."
+                  required
+                  rows={4}
+                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-gray-200 placeholder-gray-600 outline-none resize-none focus:border-blue-500/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
+                />
+              </div>
+
+              {/* Submit */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={`w-full py-4 rounded-xl text-xs font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all duration-500 cursor-pointer overflow-hidden relative group/btn
+                  ${
+                    submitted
+                      ? "bg-green-500/10 text-green-400 border border-green-500/30"
+                      : isSubmitting
+                      ? "bg-white/5 text-gray-500 border border-white/10 cursor-wait"
+                      : "bg-linear-to-r from-blue-600 to-blue-500 text-white shadow-[0_10px_30px_-10px_rgba(59,130,246,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(59,130,246,0.7)] hover:-translate-y-1 active:scale-[0.98]"
+                  }
+                `}
+              >
+                {submitted ? (
+                  <>Sent Successfully ✓</>
+                ) : isSubmitting ? (
+                  <>Sending...</>
+                ) : (
+                  <>
+                    <FaPaperPlane size={14} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                    Send Message
+                  </>
+                )}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
     </section>

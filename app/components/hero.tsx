@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 function Typewriter({ words }: { words: string[] }) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -40,13 +41,18 @@ export default function Hero() {
   return (
     <section id="home" className="w-full min-h-[100dvh] flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 px-6 md:px-12 py-20 lg:py-0">
       {/* Left side: Text & Description */}
-      <div className="flex-1 flex flex-col items-start z-10 max-w-2xl w-full">
-        <p className="text-lg md:text-xl text-gray-400 mb-1">Hello, I&apos;m</p>
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white leading-[1.1]">
+      <motion.div 
+        initial={{ opacity: 0, x: -30 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="flex-1 flex flex-col items-start z-10 max-w-2xl w-full"
+      >
+        <p className="text-lg md:text-xl text-blue-400 font-medium tracking-wide mb-2 uppercase">Hello, I&apos;m</p>
+        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-white via-blue-100 to-gray-400 leading-[1.05] pb-2 drop-shadow-sm">
           MAHAN<br className="hidden sm:block"/> GHAFARIAN
         </h1>
         
-        <div className="text-lg md:text-2xl text-gray-300 mt-4 mb-4">
+        <div className="text-xl md:text-3xl font-medium text-gray-300 mt-2 mb-6">
           I&apos;m a <Typewriter words={["Software Developer.", "Creative Engineer.", "Tech Enthusiast."]} />
         </div>
         
@@ -54,24 +60,29 @@ export default function Hero() {
           I specialize in bridging the gap between elegant design and robust engineering, 
           building scalable applications that deliver exceptional user experiences.
         </p>
-      </div>
+      </motion.div>
 
       {/* Right side: Portrait Circle */}
-      <div className="flex-1 w-full max-w-xl flex justify-center items-center z-10 perspective">
-        <div className="relative group w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-104 lg:h-104">
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
+        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+        className="flex-1 w-full max-w-xl flex justify-center items-center z-10 perspective"
+      >
+        <div className="relative group w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
           {/* Animated Glow Behind */}
-          <div className="absolute -inset-2 rounded-full bg-blue-500 opacity-20 blur-2xl group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
+          <div className="absolute -inset-4 rounded-full bg-linear-to-tr from-blue-600 to-purple-600 opacity-20 blur-3xl group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
           
           {/* The Circle Container */}
-          <div className="relative w-full h-full rounded-full p-[3px] bg-blue-500 shadow-2xl group-hover:scale-[1.02] hover:-rotate-1 transition-all duration-500">
-            <div className="w-full h-full rounded-full bg-[#0a0a0a] flex flex-col items-center justify-center overflow-hidden border-[6px] border-[#0a0a0a] relative group-hover:border-blue-500/10 transition-colors duration-500">
+          <div className="relative w-full h-full rounded-full p-1 bg-linear-to-bl from-blue-400 via-indigo-500 to-purple-500 shadow-[0_0_40px_rgba(59,130,246,0.3)] group-hover:shadow-[0_0_60px_rgba(168,85,247,0.4)] group-hover:scale-[1.02] hover:-rotate-2 transition-all duration-700">
+            <div className="w-full h-full rounded-full bg-[#0a0a0a] flex flex-col items-center justify-center overflow-hidden border-4 border-[#0a0a0a] relative">
               
               {/* To add your portrait here, you can uncomment and use the img tag: */}
-              <img src="portrait.jpg" alt="Mahan Ghafarian" className="w-full h-full object-cover object-[center_30%]" />
+              <img src="portrait.jpg" alt="Mahan Ghafarian" className="w-full h-full object-cover object-[center_30%] opacity-90 group-hover:opacity-100 transition-all duration-700" />
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
