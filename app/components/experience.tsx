@@ -6,6 +6,18 @@ import { X } from "lucide-react";
 
 const experiences = [
   {
+    role: "Brand & Content Manager",
+    company: "Google Developer Group",
+    date: "May 2026 - Present",
+    location: "North York, ON",
+    description: "Responsible for designing event posts and promotional graphics to maintain visual brand consistency across all digital platforms.",
+    bullets: [
+      "Tasked with scheduling and publishing content, actively managing social platforms to grow online presence.",
+      "Monitor audience engagement metrics to optimize posting strategies and support the creation of marketing materials for major community events."
+    ],
+    tech: ["Social Media", "Design", "Content Creation", "Analytics"]
+  },
+  {
     role: "Digital Marketing & Web Lead",
     company: "ZUIX INC.",
     date: "Sep 2024 - Present",
