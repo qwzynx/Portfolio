@@ -10,17 +10,17 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mahanghafarian.com"),
-  title: "Mahan Ghafarian | Software Developer & Creative Engineer",
-  description: "Portfolio of Mahan Ghafarian, a Software Developer and Creative Engineer specializing in building elegant, scalable applications with Next.js, React, and AI.",
-  keywords: ["Mahan Ghafarian", "Software Developer", "Creative Engineer", "Portfolio", "Next.js", "React", "TypeScript", "AI Development", "Web Development"],
+  title: "Mahan Ghafarian | Software Engineer & Security Enthusiast",
+  description: "Portfolio of Mahan Ghafarian, a Software Engineer specializing in Software Security, Hardware Hacking, and Full-Stack Development. York University Engineering student and developer of Pico-Ducky3.0.",
+  keywords: ["Mahan Ghafarian", "Software Engineer", "Software Security", "Hardware Hacking", "DuckyScript", "Pico-Ducky", "Next.js", "React", "TypeScript", "York University Engineering", "GDG York"],
   authors: [{ name: "Mahan Ghafarian" }],
   creator: "Mahan Ghafarian",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://mahanghafarian.com",
-    title: "Mahan Ghafarian | Software Developer & Creative Engineer",
-    description: "Software Developer and Creative Engineer specializing in bridging the gap between elegant design and robust engineering.",
+    title: "Mahan Ghafarian | Software Engineer & Security Enthusiast",
+    description: "Software Engineer specializing in Software Security and Hardware Hacking. York University Engineering student and developer of Pico-Ducky3.0.",
     siteName: "Mahan Ghafarian Portfolio",
     images: [
       {
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mahan Ghafarian | Software Developer & Creative Engineer",
-    description: "Software Developer and Creative Engineer specializing in bridging the gap between elegant design and robust engineering.",
+    title: "Mahan Ghafarian | Software Engineer & Security Enthusiast",
+    description: "Software Engineer specializing in Software Security and Hardware Hacking. York University Engineering student and developer of Pico-Ducky3.0.",
     images: ["/portrait.jpg"],
     creator: "@qwzynx",
   },
@@ -75,8 +75,8 @@ export default function RootLayout({
       "https://linkedin.com/in/mahan-ghafarian-b02ba0298/",
       "https://www.instagram.com/qwzynx/"
     ],
-    "jobTitle": "Software Developer",
-    "description": "Software Developer and Creative Engineer specializing in bridging the gap between elegant design and robust engineering.",
+    "jobTitle": "Software Engineer",
+    "description": "Software Engineer specializing in Software Security, Hardware Hacking, and Full-Stack Development. York University Engineering student and developer of Pico-Ducky3.0.",
   };
 
   return (

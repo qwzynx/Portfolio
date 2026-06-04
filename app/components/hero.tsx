@@ -54,7 +54,7 @@ export default function Hero() {
         </h1>
         
         <div className="text-xl md:text-3xl font-medium text-gray-300 mt-2 mb-6">
-          I&apos;m a <Typewriter words={["Software Developer.", "Creative Engineer.", "Tech Enthusiast."]} />
+          I&apos;m a <Typewriter words={["Software Engineer.", "Security Enthusiast.", "Hardware Hacker."]} />
         </div>
         
         <p className="text-gray-400 max-w-lg leading-relaxed text-base md:text-lg">
