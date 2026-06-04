@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 function Typewriter({ words }: { words: string[] }) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -77,8 +78,12 @@ export default function Hero() {
           <div className="relative w-full h-full rounded-full p-1 bg-linear-to-bl from-blue-400 via-indigo-500 to-purple-500 shadow-[0_0_40px_rgba(59,130,246,0.3)] group-hover:shadow-[0_0_60px_rgba(168,85,247,0.4)] group-hover:scale-[1.02] hover:-rotate-2 transition-all duration-700">
             <div className="w-full h-full rounded-full bg-[#0a0a0a] flex flex-col items-center justify-center overflow-hidden border-4 border-[#0a0a0a] relative">
               
-              {/* To add your portrait here, you can uncomment and use the img tag: */}
-              <img src="portrait.jpg" alt="Mahan Ghafarian" className="w-full h-full object-cover object-[center_30%] opacity-90 group-hover:opacity-100 transition-all duration-700" />
+              {/* Using standard img for this specific container to ensure visibility */}
+              <img 
+                src="/portrait.jpg" 
+                alt="Mahan Ghafarian" 
+                className="w-full h-full object-cover object-[center_30%] opacity-90 group-hover:opacity-100 transition-all duration-700" 
+              />
             </div>
           </div>
         </div>

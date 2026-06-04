@@ -31,6 +31,7 @@ const projects = [
   }
 ];
 
+// Project Card Component
 function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   return (
     <div className="w-full max-w-md group bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-4 hover:bg-white/[0.06] hover:border-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(255,255,255,0.1)] mx-auto">
@@ -53,9 +54,9 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       <div className="mt-5">
         {/* Title row with icons */}
         <div className="flex items-start justify-between gap-3 mb-1">
-          <span className="text-xl font-bold text-white leading-tight group-hover:text-blue-400 transition-colors duration-300">
+          <h3 className="text-xl font-bold text-white leading-tight group-hover:text-blue-400 transition-colors duration-300">
             {project.title}
-          </span>
+          </h3>
           <div className="flex items-center gap-3 shrink-0">
             {project.github && (
               <a

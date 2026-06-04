@@ -110,7 +110,7 @@ function ExperienceModal({ exp, onClose }: { exp: ExperienceData; onClose: () =>
         </button>
 
         <div className="mb-6">
-          <h2 className="text-2xl font-bold text-white mb-1">{exp.role}</h2>
+          <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
             <span className="text-blue-400 font-medium">{exp.company}</span>
             <span className="text-gray-500 text-sm">•</span>
