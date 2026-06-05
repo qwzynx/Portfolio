@@ -21,6 +21,13 @@
 html {
   font-size: 100%; /* 16px */
   scroll-behavior: smooth;
+  scroll-padding-top: 20vh;
+}
+
+@media (min-width: 768px) {
+  html {
+    scroll-padding-top: 25vh;
+  }
 }
 
 body {

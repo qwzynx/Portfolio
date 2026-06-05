@@ -53,7 +53,7 @@ export default function Navbar() {
             className="hover:text-white transition-colors duration-300 tracking-widest text-xs md:text-sm font-medium uppercase md:capitalize writing-v-rl"
             title="Projects"
           >
-            <span className="md:hidden"><FaCode size={20} /></span>
+            <span className="md:hidden"><FaBriefcase size={20} className="rotate-90" /></span>
             <span className="hidden md:inline">Proj<span className="hidden lg:inline">ects</span></span>
           </Link>
           <Link 

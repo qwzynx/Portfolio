@@ -109,10 +109,12 @@ export default function MainContent() {
         - Now full width
         - pt-40 to give more space for the horizontal navbar
       */}
-      <div className="w-full flex flex-col gap-48 md:gap-64 pt-40 pb-20 overflow-visible">
-        <Skills hideTitle />
-        <Experience hideTitle />
-        <Projects hideTitle />
+      <div className="w-full flex flex-col pt-32 sm:pt-40 pb-0 overflow-visible">
+        <div className="flex flex-col gap-16 sm:gap-20 md:gap-24">
+          <Skills hideTitle />
+          <Experience hideTitle />
+          <Projects hideTitle />
+        </div>
         <Contact hideTitle />
       </div>
     </div>
