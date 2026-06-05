@@ -69,7 +69,10 @@ export default function Skills({ hideTitle = false }: { hideTitle?: boolean }) {
                     {/* Hover Glow Background */}
                     <div className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
-                    <div className={`relative z-10 text-2xl sm:text-3xl md:text-4xl ${skill.color} mb-1 sm:mb-2 md:mb-3 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300 drop-shadow-lg flex items-center justify-center h-8 sm:h-10`}>
+                    <div 
+                      className={`relative z-10 text-2xl sm:text-3xl md:text-4xl ${skill.color} mb-1 sm:mb-2 md:mb-3 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300 drop-shadow-lg flex items-center justify-center h-8 sm:h-10 animate-float-subtle`}
+                      style={{ animationDelay: `${totalIndex * 0.15}s` }}
+                    >
                       <skill.icon />
                     </div>
                     <span className="relative z-10 text-[9px] sm:text-[10px] md:text-xs font-semibold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-wide text-center uppercase">

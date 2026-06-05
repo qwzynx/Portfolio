@@ -72,7 +72,7 @@ export default function Hero() {
         transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
         className="flex-1 w-full max-w-xl flex justify-center items-center z-10 perspective"
       >
-        <div className="relative group w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
+        <div className="relative group w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] animate-float">
           {/* Animated Glow Behind */}
           <div className="absolute -inset-4 rounded-full bg-linear-to-tr from-blue-600 to-purple-600 opacity-20 blur-3xl group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
           
