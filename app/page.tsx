@@ -1,8 +1,5 @@
 import Hero from "./components/hero";
-import Skills from "./components/skills";
-import Experience from "./components/experience";
-import Projects from "./components/projects";
-import Contact from "./components/contact";
+import MainContent from "./components/main-content";
 
 export default function Home() {
   return (
@@ -13,11 +10,8 @@ export default function Home() {
       </div>
 
       {/* Snap Point 2: The Start of Content */}
-      <div className="snap-start w-full flex flex-col gap-6 md:gap-8 pb-16 pt-8 md:pt-10">
-        <Skills />
-        <Experience />
-        <Projects />
-        <Contact />
+      <div className="snap-start w-full pt-8 md:pt-10">
+        <MainContent />
       </div>
     </div>
   );

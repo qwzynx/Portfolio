@@ -34,7 +34,7 @@ const projects = [
 // Project Card Component
 function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   return (
-    <div className="w-full max-w-md group bg-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-4 hover:bg-white/[0.06] hover:border-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-10px_rgba(255,255,255,0.1)] mx-auto">
+    <div className="w-full max-w-md group bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-[#0a0a0a]/80 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] mx-auto">
       {/* Image with gradient border */}
       <div
         className={`relative p-[3px] rounded-xl bg-linear-to-br ${project.gradient} shadow-lg group-hover:shadow-2xl transition-shadow duration-500`}
@@ -107,23 +107,23 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   );
 }
 
-export default function Projects() {
+export default function Projects({ hideTitle = false }: { hideTitle?: boolean }) {
   return (
-    <section id="projects" className="w-full py-8 px-6 md:px-16 flex flex-col items-center justify-center z-10 relative max-w-7xl mx-auto">
+    <section id="projects" className="w-full flex flex-col items-start z-10 relative">
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col items-center mb-12 relative group"
+        className={`flex flex-col items-start mb-10 ${hideTitle ? "hidden" : "lg:w-1/3 lg:sticky lg:top-32"}`}
       >
-        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-center leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
+        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
           Projects
         </h2>
-        <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-center">Recent work</p>
+        <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-left">Recent work</p>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
         {projects.map((project, index) => (
           <motion.div
             key={index}

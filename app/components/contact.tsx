@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPaperPlane } from "react-icons/fa";
 
-export default function Contact() {
+export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -51,26 +51,26 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="w-full py-10 px-6 md:px-16 flex flex-col items-center justify-center z-10 relative overflow-hidden max-w-7xl mx-auto"
+      className="w-full flex flex-col items-start z-10 relative overflow-hidden"
     >
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-linear-to-tr from-blue-600/5 to-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
 
       {/* Section heading */}
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col items-center mb-16 relative group"
+        className={`flex flex-col items-start mb-10 ${hideTitle ? "hidden" : "lg:w-1/3 lg:sticky lg:top-32"}`}
       >
-        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-center leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
+        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
           Contact
         </h2>
-        <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-center">Get in touch</p>
+        <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-left">Get in touch</p>
       </motion.div>
 
-      <div className="w-full max-w-5xl flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch relative z-10">
+      <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch relative z-10">
         {/* ─── LEFT SIDE ─── */}
         <div className="flex-1 flex flex-col justify-center">
           <h3
@@ -101,7 +101,7 @@ export default function Contact() {
           <div className="relative p-[1px] rounded-3xl bg-linear-to-br from-white/10 to-transparent transition-all duration-700">
             <form
               onSubmit={handleSubmit}
-              className="bg-white/[0.02] backdrop-blur-3xl rounded-[23px] p-8 md:p-10 space-y-6 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+              className="bg-[#0a0a0a]/60 backdrop-blur-xl rounded-2xl p-8 md:p-10 space-y-6 border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
             >
               {/* Name */}
               <div className="space-y-2">
@@ -114,7 +114,7 @@ export default function Contact() {
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your name"
                   required
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-500/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
+                  className="w-full bg-[#0a0a0a]/40 border border-white/10 rounded-xl px-5 py-4 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-500/50 focus:bg-[#0a0a0a]/80 focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
                 />
               </div>
 
@@ -129,7 +129,7 @@ export default function Contact() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="your@email.com"
                   required
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-500/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
+                  className="w-full bg-[#0a0a0a]/40 border border-white/10 rounded-xl px-5 py-4 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-500/50 focus:bg-[#0a0a0a]/80 focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
                 />
               </div>
 
@@ -144,7 +144,7 @@ export default function Contact() {
                   placeholder="Tell me about your project..."
                   required
                   rows={4}
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-5 py-4 text-sm text-gray-200 placeholder-gray-600 outline-none resize-none focus:border-blue-500/50 focus:bg-white/[0.05] focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
+                  className="w-full bg-[#0a0a0a]/40 border border-white/10 rounded-xl px-5 py-4 text-sm text-gray-200 placeholder-gray-600 outline-none resize-none focus:border-blue-500/50 focus:bg-[#0a0a0a]/80 focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
                 />
               </div>
 

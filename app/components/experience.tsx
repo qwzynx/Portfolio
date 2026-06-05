@@ -74,7 +74,7 @@ function ExperienceCard({ exp, onClick }: { exp: ExperienceData; onClick: () => 
   return (
     <button
       onClick={onClick}
-      className="flex flex-col items-start p-4 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-xl hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300 text-left w-full group relative overflow-hidden"
+      className="flex flex-col items-start p-6 bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 rounded-2xl hover:bg-[#0a0a0a]/80 hover:border-white/20 transition-all duration-500 text-left w-full group relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
     >
       <div className="absolute inset-0 bg-linear-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       <h3 className="text-base font-bold text-white mb-1 group-hover:text-blue-400 transition-colors duration-300 leading-tight">{exp.role}</h3>
@@ -153,30 +153,30 @@ function ExperienceModal({ exp, onClose }: { exp: ExperienceData; onClose: () =>
   );
 }
 
-export default function Experience() {
+export default function Experience({ hideTitle = false }: { hideTitle?: boolean }) {
   const [selectedExp, setSelectedExp] = useState<ExperienceData | null>(null);
 
   return (
-    <section id="experience" className="w-full py-8 flex flex-col items-center relative overflow-hidden max-w-7xl mx-auto px-6 md:px-16">
+    <section id="experience" className="w-full flex flex-col items-start relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-linear-to-tr from-blue-600/10 to-purple-600/10 blur-[120px] rounded-full pointer-events-none" />
 
-      <div className="w-full flex flex-col items-center">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center mb-16 relative group"
-        >
-          <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-center leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
-            Experience
-          </h2>
-          <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-center">
-            Professional journey
-          </p>
-        </motion.div>
+      <motion.div 
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className={`flex flex-col items-start mb-10 ${hideTitle ? "hidden" : "lg:w-1/3 lg:sticky lg:top-32"}`}
+      >
+        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
+          Experience
+        </h2>
+        <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-left">
+          Professional journey
+        </p>
+      </motion.div>
 
+      <div className="w-full">
         {/* Timeline Container */}
         <div className="relative w-full">
           {/* Vertical center line */}

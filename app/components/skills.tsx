@@ -22,23 +22,23 @@ const skills = [
   { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
 ];
 
-export default function Skills() {
+export default function Skills({ hideTitle = false }: { hideTitle?: boolean }) {
   return (
-    <section id="skills" className="w-full py-10 px-6 md:px-16 flex flex-col items-center justify-center z-10 relative max-w-7xl mx-auto">
+    <section id="skills" className="w-full flex flex-col items-start z-10 relative">
       <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
+        initial={{ opacity: 0, x: -20 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="flex flex-col items-center mb-12 relative group"
+        className={`flex flex-col items-start mb-10 ${hideTitle ? "hidden" : "lg:w-1/3 lg:sticky lg:top-32"}`}
       >
-        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-center leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white">
+        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white">
           SKILLS
         </h2>
-        <p className="text-blue-400 mt-4 text-sm md:text-base italic font-semibold tracking-widest uppercase text-center">I use arch btw</p>
+        <p className="text-blue-400 mt-4 text-sm md:text-base italic font-semibold tracking-widest uppercase text-left">I use arch btw</p>
       </motion.div>
       
-      <div className="flex flex-wrap justify-center gap-4 sm:gap-5 max-w-4xl">
+      <div className="flex flex-wrap justify-start gap-4 sm:gap-5 w-full">
         {skills.map((skill, index) => (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ export default function Skills() {
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: index * 0.05 }}
             key={index} 
-            className="group relative flex flex-col items-center justify-center p-3 sm:p-4 w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-white/[0.02] backdrop-blur-xl border border-white/10 hover:bg-white/[0.05] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_35px_-10px_rgba(255,255,255,0.1)] overflow-hidden cursor-default"
+            className="group relative flex flex-col items-center justify-center p-3 sm:p-4 w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 hover:bg-[#0a0a0a]/80 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_35px_-10px_rgba(0,0,0,0.5)] overflow-hidden cursor-default"
           >
             {/* Hover Glow Background */}
             <div className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

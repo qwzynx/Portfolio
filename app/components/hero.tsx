@@ -44,7 +44,8 @@ export default function Hero() {
       {/* Left side: Text & Description */}
       <motion.div 
         initial={{ opacity: 0, x: -30 }}
-        animate={{ opacity: 1, x: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "0px 0px -20% 0px" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="flex-1 flex flex-col items-start z-10 max-w-2xl w-full"
       >
@@ -66,7 +67,8 @@ export default function Hero() {
       {/* Right side: Portrait Circle */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
-        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+        whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+        viewport={{ once: true, margin: "0px 0px -20% 0px" }}
         transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
         className="flex-1 w-full max-w-xl flex justify-center items-center z-10 perspective"
       >
