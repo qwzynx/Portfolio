@@ -40,7 +40,7 @@ function Typewriter({ words }: { words: string[] }) {
 
 export default function Hero() {
   return (
-    <section id="home" className="w-full min-h-[100dvh] flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 px-6 md:px-12 py-20 lg:py-0">
+    <section id="home" className="w-full min-h-[95dvh] flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 px-6 md:px-12 py-16 lg:py-0">
       {/* Left side: Text & Description */}
       <motion.div 
         initial={{ opacity: 0, x: -30 }}

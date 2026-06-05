@@ -10,7 +10,7 @@ export default function Home() {
       </div>
 
       {/* Snap Point 2: The Start of Content */}
-      <div className="snap-start w-full pt-8 md:pt-10">
+      <div className="snap-start w-full pt-4 md:pt-6">
         <MainContent />
       </div>
     </div>

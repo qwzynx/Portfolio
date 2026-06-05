@@ -107,15 +107,21 @@ export default function MainContent() {
       {/* 
         The Scrollable Content Section
         - Now full width
-        - pt-40 to give more space for the horizontal navbar
+        - adjusted pt for better balance
       */}
-      <div className="w-full flex flex-col pt-32 sm:pt-40 pb-0 overflow-visible">
-        <div className="flex flex-col gap-16 sm:gap-20 md:gap-24">
+      <div className="w-full flex flex-col pt-20 sm:pt-24 pb-0 overflow-visible">
+        <div className="flex flex-col gap-20 sm:gap-28 md:gap-36">
           <Skills hideTitle />
-          <Experience hideTitle />
-          <Projects hideTitle />
+          <div className="pt-4 sm:pt-6 md:pt-8">
+            <Experience hideTitle />
+          </div>
+          <div className="pt-4 sm:pt-6 md:pt-8">
+            <Projects hideTitle />
+          </div>
+          <div className="-mt-12 sm:-mt-16 md:-mt-20">
+            <Contact hideTitle />
+          </div>
         </div>
-        <Contact hideTitle />
       </div>
     </div>
   );

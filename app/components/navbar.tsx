@@ -58,6 +58,13 @@ export default function Navbar() {
           </Link>
           <Link 
             href="#contact" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({
+                top: document.documentElement.scrollHeight,
+                behavior: 'smooth'
+              });
+            }}
             className="hover:text-white transition-colors duration-300 tracking-widest text-xs md:text-sm font-medium uppercase md:capitalize writing-v-rl"
             title="Contact"
           >

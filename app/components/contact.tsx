@@ -51,7 +51,7 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
   return (
     <section
       id="contact"
-      className="w-full min-h-[80vh] md:min-h-screen flex flex-col items-center justify-center z-10 relative overflow-hidden py-12 sm:py-16 md:pt-0 md:pb-24"
+      className="w-full min-h-screen flex flex-col items-center justify-center z-10 relative overflow-hidden py-12 sm:py-16 md:py-0 snap-end scroll-mt-20"
     >
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-linear-to-tr from-blue-600/5 to-purple-600/5 blur-[80px] sm:blur-[120px] rounded-full pointer-events-none" />
