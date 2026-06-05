@@ -7,6 +7,31 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+
+    if (id === "contact") {
+      window.scrollTo({
+        top: document.documentElement.scrollHeight,
+        behavior: "smooth"
+      });
+      return;
+    }
+
+    const element = document.getElementById(id);
+    if (element) {
+      // Calculate exact offset: ~120px on mobile to clear the floating title, ~160px on desktop
+      const offset = window.innerWidth < 768 ? 120 : 160;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.scrollY - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth"
+      });
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -33,7 +58,12 @@ export default function Navbar() {
       <nav className="flex flex-row md:flex-col items-center gap-5 md:gap-10 px-6 py-3 md:py-8 bg-[#0a0a0a]/90 backdrop-blur-xl rounded-full h-full">
         {/* Logo - Hidden on tiny screens, shown on md+ */}
         <div className="hidden md:flex w-full justify-center">
-          <Link href="#home" className="text-white text-2xl font-bold tracking-tighter" style={{ fontFamily: 'Cal Sans' }}>
+          <Link 
+            href="/" 
+            onClick={(e) => scrollToSection(e, "home")}
+            className="text-white text-2xl font-bold tracking-tighter" 
+            style={{ fontFamily: 'Cal Sans' }}
+          >
             MG
           </Link>
         </div>
@@ -41,7 +71,8 @@ export default function Navbar() {
         {/* Primary Links */}
         <div className="flex flex-row md:flex-col gap-6 md:gap-8 items-center text-gray-300">
           <Link 
-            href="#experience" 
+            href="/" 
+            onClick={(e) => scrollToSection(e, "experience")}
             className="hover:text-white transition-colors duration-300 tracking-widest text-xs md:text-sm font-medium uppercase md:capitalize writing-v-rl"
             title="Experience"
           >
@@ -49,22 +80,17 @@ export default function Navbar() {
             <span className="hidden md:inline">Exp<span className="hidden lg:inline">erience</span></span>
           </Link>
           <Link 
-            href="#projects" 
+            href="/" 
+            onClick={(e) => scrollToSection(e, "projects")}
             className="hover:text-white transition-colors duration-300 tracking-widest text-xs md:text-sm font-medium uppercase md:capitalize writing-v-rl"
             title="Projects"
           >
-            <span className="md:hidden"><FaBriefcase size={20} className="rotate-90" /></span>
+            <span className="md:hidden"><FaCode size={20} /></span>
             <span className="hidden md:inline">Proj<span className="hidden lg:inline">ects</span></span>
           </Link>
           <Link 
-            href="#contact" 
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({
-                top: document.documentElement.scrollHeight,
-                behavior: 'smooth'
-              });
-            }}
+            href="/" 
+            onClick={(e) => scrollToSection(e, "contact")}
             className="hover:text-white transition-colors duration-300 tracking-widest text-xs md:text-sm font-medium uppercase md:capitalize writing-v-rl"
             title="Contact"
           >

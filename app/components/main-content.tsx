@@ -11,7 +11,7 @@ import GlitchText from "./glitch-text";
 const SECTIONS = [
   { id: "skills", title: "SKILLS", subtitle: "I use arch btw" },
   { id: "experience", title: "EXPERIENCES", subtitle: "Professional journey" },
-  { id: "projects", title: "PROJECT", subtitle: "Recent work" },
+  { id: "projects", title: "PROJECTS", subtitle: "Recent work" },
   { id: "contact", title: "CONTACT", subtitle: "Get in touch" }
 ];
 
@@ -112,7 +112,7 @@ export default function MainContent() {
       <div className="w-full flex flex-col pt-20 sm:pt-24 pb-0 overflow-visible">
         <div className="flex flex-col gap-20 sm:gap-28 md:gap-36">
           <Skills hideTitle />
-          <div className="pt-4 sm:pt-6 md:pt-8">
+          <div className="pt-16 sm:pt-6 md:pt-8">
             <Experience hideTitle />
           </div>
           <div className="pt-4 sm:pt-6 md:pt-8">

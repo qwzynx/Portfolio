@@ -31,7 +31,7 @@ function Typewriter({ words }: { words: string[] }) {
   }, [currentText, isDeleting, currentWordIndex, words]);
 
   return (
-    <span className="text-blue-400 inline-block min-w-[200px]">
+    <span className="text-blue-400 inline-block min-w-[120px] sm:min-w-[200px]">
       {currentText}
       <span className="animate-pulse text-white">|</span>
     </span>
@@ -50,8 +50,8 @@ export default function Hero() {
         className="flex-1 flex flex-col items-start z-10 max-w-2xl w-full"
       >
         <p className="text-lg md:text-xl text-blue-400 font-medium tracking-wide mb-2 uppercase">Hello, I&apos;m</p>
-        <h1 className="text-5xl sm:text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-white via-blue-100 to-gray-400 leading-[1.05] pb-2 drop-shadow-sm">
-          MAHAN<br className="hidden sm:block"/> GHAFARIAN
+        <h1 className="text-[9vw] sm:text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-white via-blue-100 to-gray-400 leading-[1.05] py-2 pr-4 drop-shadow-sm">
+          MAHAN<br />GHAFARIAN
         </h1>
         
         <div className="text-xl md:text-3xl font-medium text-gray-300 mt-2 mb-6">
@@ -72,7 +72,7 @@ export default function Hero() {
         transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
         className="flex-1 w-full max-w-xl flex justify-center items-center z-10 perspective"
       >
-        <div className="relative group w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
+        <div className="relative group w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem]">
           {/* Animated Glow Behind */}
           <div className="absolute -inset-4 rounded-full bg-linear-to-tr from-blue-600 to-purple-600 opacity-20 blur-3xl group-hover:opacity-40 transition-opacity duration-700 animate-pulse"></div>
           
