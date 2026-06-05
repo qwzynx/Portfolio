@@ -50,7 +50,7 @@ export default function Hero() {
         className="flex-1 flex flex-col items-start z-10 max-w-2xl w-full"
       >
         <p className="text-lg md:text-xl text-blue-400 font-medium tracking-wide mb-2 uppercase">Hello, I&apos;m</p>
-        <h1 className="text-[9vw] sm:text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-white via-blue-100 to-gray-400 leading-[1.05] py-2 pr-4 drop-shadow-sm">
+        <h1 className="font-extrabold tracking-tighter text-transparent bg-clip-text bg-linear-to-r from-white via-blue-100 to-gray-400 leading-[1.05] py-2 pr-4 drop-shadow-sm">
           MAHAN<br />GHAFARIAN
         </h1>
         

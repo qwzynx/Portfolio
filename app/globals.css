@@ -64,7 +64,21 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
 
-h1 {font-size: 4.210rem; /* 67.36px */}
+h1 {
+  font-size: 2.25rem; /* 36px */
+}
+
+@media (min-width: 375px) {
+  h1 {
+    font-size: 3rem; /* 48px */
+  }
+}
+
+@media (min-width: 640px) {
+  h1 {
+    font-size: 4.210rem; /* 67.36px */
+  }
+}
 
 h2 {font-size: 3.158rem; /* 50.56px */}
 
