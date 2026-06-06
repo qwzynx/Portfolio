@@ -154,7 +154,7 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3 sm:py-4 rounded-xl text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all duration-500 cursor-pointer overflow-hidden relative group/btn
+                className={`w-full py-3 sm:py-4 rounded-xl text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all duration-500 overflow-hidden relative group/btn
                   ${
                     submitted
                       ? "bg-green-500/10 text-green-400 border border-green-500/30"
