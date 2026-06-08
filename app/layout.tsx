@@ -88,6 +88,8 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-full flex bg-background text-foreground">
+        <div className="fixed top-0 left-0 right-0 h-24 bg-linear-to-b from-background to-transparent z-30 pointer-events-none" />
+        <div className="fixed bottom-0 left-0 right-0 h-24 bg-linear-to-t from-background to-transparent z-30 pointer-events-none" />
         <Navbar />
         <main className="flex-1 pl-0 md:pl-20 overflow-x-hidden">
           {children}
