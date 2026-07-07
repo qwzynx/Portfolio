@@ -76,10 +76,10 @@ function ExperienceCard({ exp, onClick }: { exp: ExperienceData; onClick: () => 
       onClick={onClick}
       className="flex flex-col items-start p-6 bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 rounded-2xl hover:bg-[#0a0a0a]/80 hover:border-white/20 transition-all duration-500 text-left w-full group relative overflow-hidden hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
     >
-      <div className="absolute inset-0 bg-linear-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <h3 className="text-base font-bold text-white mb-1 group-hover:text-blue-400 transition-colors duration-300 leading-tight">{exp.role}</h3>
+      <div className="absolute inset-0 bg-linear-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <h3 className="text-base font-bold text-white mb-1 group-hover:text-purple-400 transition-colors duration-300 leading-tight">{exp.role}</h3>
       <div className="flex flex-col gap-0.5">
-        <span className="text-sm text-blue-400/90 font-semibold">{exp.company}</span>
+        <span className="text-sm text-purple-400/90 font-semibold">{exp.company}</span>
         <span className="text-xs text-gray-400 font-medium">{exp.date}</span>
       </div>
     </button>
@@ -112,7 +112,7 @@ function ExperienceModal({ exp, onClose }: { exp: ExperienceData; onClose: () =>
         <div className="mb-6">
           <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span className="text-blue-400 font-medium">{exp.company}</span>
+            <span className="text-purple-400 font-medium">{exp.company}</span>
             <span className="text-gray-500 text-sm">•</span>
             <span className="text-gray-400 text-sm">{exp.date}</span>
           </div>
@@ -130,7 +130,7 @@ function ExperienceModal({ exp, onClose }: { exp: ExperienceData; onClose: () =>
             <ul className="space-y-3">
               {exp.bullets.map((bullet, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-400 text-sm leading-relaxed">
-                  <span className="mt-2 h-1 w-1 rounded-full bg-blue-500 shrink-0" />
+                  <span className="mt-2 h-1 w-1 rounded-full bg-purple-500 shrink-0" />
                   {bullet}
                 </li>
               ))}
@@ -191,8 +191,8 @@ export default function Experience({ hideTitle = false }: { hideTitle?: boolean 
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  key={index} 
-                  className="relative flex md:items-center w-full min-h-[50px] md:py-2"
+                  key={index}
+                  className="group/row relative flex md:items-center w-full min-h-[50px] md:py-2"
                 >
                   {/* Desktop View */}
                   <div className="hidden md:flex flex-1 justify-end">
@@ -207,7 +207,7 @@ export default function Experience({ hideTitle = false }: { hideTitle?: boolean 
 
                   {/* Center Dot - Desktop Only */}
                   <div className="hidden md:flex shrink-0 w-12 items-center justify-center relative z-20">
-                    <span className="h-4 w-4 rounded-full bg-linear-to-tr from-blue-500 to-purple-500 ring-4 ring-[#0a0a0a] shadow-[0_0_20px_rgba(59,130,246,0.6)] transition-transform duration-500 group-hover:scale-150" />
+                    <span className="h-4 w-4 rounded-full bg-linear-to-tr from-blue-500 to-purple-500 ring-4 ring-[#0a0a0a] shadow-[0_0_20px_rgba(59,130,246,0.6)] transition-transform duration-500 group-hover/row:scale-150" />
                   </div>
 
                   <div className="hidden md:flex flex-1 justify-start">

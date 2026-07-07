@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { ChevronDown } from "lucide-react";
 
 function Typewriter({ words }: { words: string[] }) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -40,7 +40,7 @@ function Typewriter({ words }: { words: string[] }) {
 
 export default function Hero() {
   return (
-    <section id="home" className="w-full min-h-[95dvh] flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 px-6 md:px-12 py-16 lg:py-0">
+    <section id="home" className="relative w-full min-h-[95dvh] flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 px-6 md:px-12 py-16 lg:py-0">
       {/* Left side: Text & Description */}
       <motion.div 
         initial={{ opacity: 0, x: -30 }}
@@ -59,9 +59,24 @@ export default function Hero() {
         </div>
         
         <p className="text-gray-400 max-w-lg leading-relaxed text-base md:text-lg">
-          I specialize in bridging the gap between elegant design and robust engineering, 
+          I specialize in bridging the gap between elegant design and robust engineering,
           building scalable applications that deliver exceptional user experiences.
         </p>
+
+        <div className="flex flex-wrap items-center gap-4 mt-8">
+          <a
+            href="#projects"
+            className="px-7 py-3 rounded-full bg-linear-to-r from-blue-600 to-blue-500 text-white text-xs sm:text-sm font-bold uppercase tracking-wider shadow-[0_10px_30px_-10px_rgba(59,130,246,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(59,130,246,0.7)] hover:-translate-y-1 active:scale-[0.98] transition-all duration-300"
+          >
+            View Projects
+          </a>
+          <a
+            href="#contact"
+            className="px-7 py-3 rounded-full border border-white/15 text-gray-200 text-xs sm:text-sm font-bold uppercase tracking-wider hover:border-blue-400/50 hover:text-blue-400 hover:-translate-y-1 transition-all duration-300"
+          >
+            Get in Touch
+          </a>
+        </div>
       </motion.div>
 
       {/* Right side: Portrait Circle */}
@@ -90,6 +105,19 @@ export default function Hero() {
           </div>
         </div>
       </motion.div>
+
+      {/* Scroll indicator */}
+      <motion.a
+        href="#skills"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-gray-500 hover:text-blue-400 transition-colors duration-300 z-10"
+        aria-label="Scroll to content"
+      >
+        <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Scroll</span>
+        <ChevronDown size={18} className="animate-bounce" />
+      </motion.a>
     </section>
   );
 }

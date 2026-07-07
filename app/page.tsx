@@ -1,5 +1,6 @@
 import Hero from "./components/hero";
 import MainContent from "./components/main-content";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
       <div className="snap-start w-full pt-4 md:pt-6">
         <MainContent />
       </div>
+
+      <Footer />
     </div>
   );
 }

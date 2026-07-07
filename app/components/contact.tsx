@@ -80,7 +80,7 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
             <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-400 to-purple-400">vision to life?</span>
           </h3>
 
-          <p className="text-gray-400 leading-relaxed mb-4 sm:mb-10 max-w-md mx-auto lg:mx-0 text-xs sm:text-base md:text-lg">
+          <p className="text-gray-400 leading-relaxed mb-4 sm:mb-10 max-w-md mx-auto lg:mx-0 text-sm sm:text-base md:text-lg">
             Great products start with a simple conversation. Let&apos;s collaborate and make it a success.
           </p>
 
@@ -90,8 +90,8 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
               <FaEnvelope className="text-blue-400 group-hover:scale-110 transition-transform duration-300 text-xs sm:text-base" />
             </div>
             <div className="text-left">
-              <p className="text-[8px] sm:text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mb-0.5">Direct Email</p>
-              <p className="text-xs sm:text-base text-gray-200 font-medium group-hover:text-blue-400 transition-colors duration-300">mahan207gh@gmail.com</p>
+              <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mb-0.5">Direct Email</p>
+              <p className="text-sm sm:text-base text-gray-200 font-medium group-hover:text-blue-400 transition-colors duration-300">mahan207gh@gmail.com</p>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {/* Name */}
                 <div className="space-y-1.5">
-                  <label className="block text-[9px] text-gray-500 uppercase tracking-[0.2em] font-bold px-1">
+                  <label className="block text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold px-1">
                     Name
                   </label>
                   <input
@@ -115,13 +115,13 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Name"
                     required
-                    className="w-full bg-[#0a0a0a]/40 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-500/50 focus:bg-[#0a0a0a]/80 focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
+                    className="w-full bg-[#0a0a0a]/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-500/50 focus:bg-[#0a0a0a]/80 focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
                   />
                 </div>
 
                 {/* Email */}
                 <div className="space-y-1.5">
-                  <label className="block text-[9px] text-gray-500 uppercase tracking-[0.2em] font-bold px-1">
+                  <label className="block text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold px-1">
                     Email
                   </label>
                   <input
@@ -130,14 +130,14 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Email"
                     required
-                    className="w-full bg-[#0a0a0a]/40 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-500/50 focus:bg-[#0a0a0a]/80 focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
+                    className="w-full bg-[#0a0a0a]/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder-gray-600 outline-none focus:border-blue-500/50 focus:bg-[#0a0a0a]/80 focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
                   />
                 </div>
               </div>
 
               {/* Message */}
               <div className="space-y-1.5">
-                <label className="block text-[9px] text-gray-500 uppercase tracking-[0.2em] font-bold px-1">
+                <label className="block text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold px-1">
                   Message
                 </label>
                 <textarea
@@ -146,7 +146,7 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
                   placeholder="Your message..."
                   required
                   rows={3}
-                  className="w-full bg-[#0a0a0a]/40 border border-white/10 rounded-xl px-4 py-3 text-xs sm:text-sm text-gray-200 placeholder-gray-600 outline-none resize-none focus:border-blue-500/50 focus:bg-[#0a0a0a]/80 focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
+                  className="w-full bg-[#0a0a0a]/40 border border-white/10 rounded-xl px-4 py-3 text-sm text-gray-200 placeholder-gray-600 outline-none resize-none focus:border-blue-500/50 focus:bg-[#0a0a0a]/80 focus:ring-4 focus:ring-blue-500/5 transition-all duration-300"
                 />
               </div>
 
@@ -154,7 +154,7 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3 sm:py-4 rounded-xl text-[10px] sm:text-xs font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all duration-500 overflow-hidden relative group/btn
+                className={`w-full py-3 sm:py-4 rounded-xl text-xs font-bold uppercase tracking-[0.2em] flex items-center justify-center gap-3 transition-all duration-500 overflow-hidden relative group/btn
                   ${
                     submitted
                       ? "bg-green-500/10 text-green-400 border border-green-500/30"

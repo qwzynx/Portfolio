@@ -53,7 +53,7 @@ export default function Skills({ hideTitle = false }: { hideTitle?: boolean }) {
           return (
             <div 
               key={rowIndex} 
-              className="flex flex-row justify-center gap-3 sm:gap-4 md:gap-5 w-full"
+              className="flex flex-row justify-center gap-2 sm:gap-4 md:gap-5 w-full"
             >
               {rowSkills.map((skill, skillIndex) => {
                 const totalIndex = startIndex + skillIndex;
@@ -64,7 +64,7 @@ export default function Skills({ hideTitle = false }: { hideTitle?: boolean }) {
                     viewport={{ once: true, margin: "-50px" }}
                     transition={{ duration: 0.5, delay: totalIndex * 0.05 }}
                     key={totalIndex} 
-                    className="group relative flex flex-col items-center justify-center p-2 sm:p-3 md:p-4 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 hover:bg-[#0a0a0a]/80 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_35px_-10px_rgba(0,0,0,0.5)] overflow-hidden cursor-default shrink-0"
+                    className="group relative flex flex-col items-center justify-center p-2 sm:p-3 md:p-4 w-16 h-16 min-[420px]:w-20 min-[420px]:h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-2xl bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 hover:bg-[#0a0a0a]/80 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_35px_-10px_rgba(0,0,0,0.5)] overflow-hidden cursor-default shrink-0"
                   >
                     {/* Hover Glow Background */}
                     <div className="absolute inset-0 bg-linear-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

@@ -1,6 +1,20 @@
 import type { Metadata, Viewport } from "next";
+import { Cal_Sans, DM_Sans } from "next/font/google";
 import Navbar from "./components/navbar";
 import "./globals.css";
+
+const calSans = Cal_Sans({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-cal-sans",
+  adjustFontFallback: false,
+  fallback: ["sans-serif"],
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+});
 
 export const viewport: Viewport = {
   themeColor: "#0a0a0a",
@@ -80,7 +94,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="h-full antialiased dark scroll-smooth snap-y snap-proximity">
+    <html lang="en" className={`${calSans.variable} ${dmSans.variable} h-full antialiased dark scroll-smooth snap-y snap-proximity`}>
       <head>
         <script
           type="application/ld+json"

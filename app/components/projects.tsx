@@ -6,6 +6,8 @@ import Image from "next/image";
 import { FaGithub } from "react-icons/fa";
 import { HiExternalLink } from "react-icons/hi";
 
+// Screenshots live in public/projects/ — see public/projects/README.md.
+// Set image to e.g. "/projects/zuix.jpg"; empty string shows a gradient placeholder.
 const projects = [
   {
     title: "ZUIX INC.",
@@ -78,9 +80,12 @@ const projects = [
 // Project Card Component
 function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   return (
-    <div className="w-full group bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-[#0a0a0a]/80 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] mx-auto h-full flex flex-col">
-      {/* Image with gradient border - Only if image exists */}
-      {project.image && (
+    <div className="relative overflow-hidden w-full group bg-[#0a0a0a]/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:bg-[#0a0a0a]/80 hover:border-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] mx-auto h-full flex flex-col">
+      {/* Gradient accent edge */}
+      <div className={`absolute top-0 left-0 right-0 h-[3px] bg-linear-to-r ${project.gradient} opacity-60 group-hover:opacity-100 transition-opacity duration-500`} />
+
+      {/* Image with gradient border, or gradient placeholder */}
+      {project.image ? (
         <div
           className={`relative p-[3px] rounded-xl bg-linear-to-br ${project.gradient} shadow-lg group-hover:shadow-2xl transition-shadow duration-500 mb-5`}
         >
@@ -94,10 +99,19 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
             />
           </div>
         </div>
+      ) : (
+        <div className="relative rounded-xl overflow-hidden aspect-video mb-5 border border-white/10">
+          <div className={`absolute inset-0 bg-linear-to-br ${project.gradient} opacity-25 group-hover:opacity-40 transition-opacity duration-500`} />
+          <div className="absolute inset-0 flex items-center justify-center px-4">
+            <span className="text-2xl md:text-3xl font-black tracking-tighter uppercase text-white/30 group-hover:text-white/50 transition-colors duration-500 text-center leading-none">
+              {project.title}
+            </span>
+          </div>
+        </div>
       )}
 
       {/* Content */}
-      <div className={`flex flex-col flex-1 ${project.image ? "" : "mt-2"}`}>
+      <div className="flex flex-col flex-1">
         {/* Title row with icons */}
         <div className="flex items-start justify-between gap-3 mb-1">
           <h3 className="text-xl font-bold text-white leading-tight group-hover:text-blue-400 transition-colors duration-300">
