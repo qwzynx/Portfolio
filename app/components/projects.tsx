@@ -169,7 +169,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 
 export default function Projects({ hideTitle = false }: { hideTitle?: boolean }) {
   return (
-    <section id="projects" className="w-full flex flex-col items-start z-10 relative">
+    <section id="projects" className="scroll-mt-6 w-full flex flex-col items-start z-10 relative">
       <motion.div 
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}

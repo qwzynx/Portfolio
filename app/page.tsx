@@ -4,7 +4,7 @@ import Footer from "./components/footer";
 
 export default function Home() {
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full flex flex-col relative">
       {/* Snap Point 1: The Hero */}
       <div className="snap-start w-full">
         <Hero />
@@ -15,7 +15,11 @@ export default function Home() {
         <MainContent />
       </div>
 
-      <Footer />
+      {/* On md+ the footer overlays the empty bottom of the full-height contact
+          section, so the centered contact content stays centered at max scroll */}
+      <div className="md:absolute md:bottom-0 md:left-0 md:right-0 md:z-20">
+        <Footer />
+      </div>
     </div>
   );
 }

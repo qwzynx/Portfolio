@@ -157,7 +157,7 @@ export default function Experience({ hideTitle = false }: { hideTitle?: boolean 
   const [selectedExp, setSelectedExp] = useState<ExperienceData | null>(null);
 
   return (
-    <section id="experience" className="w-full flex flex-col items-start relative overflow-hidden">
+    <section id="experience" className="scroll-mt-6 w-full flex flex-col items-start relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-linear-to-tr from-blue-600/10 to-purple-600/10 blur-[120px] rounded-full pointer-events-none animate-glow-pulse" />
 

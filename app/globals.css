@@ -20,12 +20,13 @@
 html {
   font-size: 100%; /* 16px */
   scroll-behavior: smooth;
-  scroll-padding-top: 16vh;
+  /* Clears the fixed floating section-title pill so anchored sections land right below it */
+  scroll-padding-top: 6rem;
 }
 
 @media (min-width: 768px) {
   html {
-    scroll-padding-top: 25vh;
+    scroll-padding-top: 7rem;
   }
 }
 

@@ -39,6 +39,11 @@ function Typewriter({ words }: { words: string[] }) {
 }
 
 export default function Hero() {
+  const scrollToBottom = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" });
+  };
+
   return (
     <section id="home" className="relative w-full min-h-[95dvh] flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 px-6 md:px-12 py-16 lg:py-0">
       {/* Left side: Text & Description */}
@@ -72,6 +77,7 @@ export default function Hero() {
           </a>
           <a
             href="#contact"
+            onClick={scrollToBottom}
             className="px-7 py-3 rounded-full border border-white/15 text-gray-200 text-xs sm:text-sm font-bold uppercase tracking-wider hover:border-blue-400/50 hover:text-blue-400 hover:-translate-y-1 transition-all duration-300"
           >
             Get in Touch
