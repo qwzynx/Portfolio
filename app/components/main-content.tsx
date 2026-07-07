@@ -83,9 +83,9 @@ export default function MainContent() {
               transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="pointer-events-auto bg-[#0a0a0a]/90 backdrop-blur-xl border border-white/10 rounded-full px-8 md:px-12 py-3 md:py-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex flex-row items-center gap-6 md:gap-10"
             >
-              <GlitchText 
-                text={activeSection.title} 
-                className="text-2xl md:text-4xl font-black tracking-tight text-white uppercase"
+              <GlitchText
+                text={activeSection.title}
+                className="font-heading text-2xl md:text-4xl font-black tracking-tight text-white uppercase"
               />
               
               {/* Vertical Separator */}

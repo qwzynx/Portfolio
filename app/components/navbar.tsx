@@ -62,7 +62,7 @@ export default function Navbar() {
             href="/" 
             onClick={(e) => scrollToSection(e, "home")}
             className="text-white text-2xl font-bold tracking-tighter"
-            style={{ fontFamily: 'var(--font-cal-sans)' }}
+            style={{ fontFamily: 'var(--font-inter-tight)' }}
           >
             MG
           </Link>
