@@ -65,6 +65,17 @@ const projects = [
     live: "",
   },
   {
+    title: "ENG2003 Portfolio",
+    date: "Aug 2026",
+    description:
+      "A communication portfolio built for ENG2003 (Effective Engineering Communication) at York University's Lassonde School of Engineering, showcasing a technical report, tailored handouts, a cover letter, and hardware documentation alongside reflective writing on audience-focused design.",
+    image: "",
+    tech: ["Vite", "HTML", "CSS", "JavaScript", "GitHub Pages", "Vercel"],
+    gradient: "from-violet-500 to-fuchsia-400",
+    github: "",
+    live: "https://eng2003.mahanghafarian.com",
+  },
+  {
     title: "Pico-Ducky3.0",
     date: "May 2026",
     description:
