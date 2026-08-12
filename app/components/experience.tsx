@@ -7,15 +7,15 @@ import { X } from "lucide-react";
 const experiences = [
   {
     role: "Brand & Content Manager",
-    company: "Google Developer Group",
+    company: "GDG on Campus York University",
     date: "May 2026 - Present",
-    location: "North York, ON",
-    description: "Responsible for designing event posts and promotional graphics to maintain visual brand consistency across all digital platforms.",
+    location: "Toronto, Ontario, Canada",
+    description: "A chapter that restarted this year. Designed the posters and promotional graphics for the relaunch and for the chapter's first event, an info session at Google Toronto HQ with five industry speakers, and shot the photography for the day.",
     bullets: [
-      "Tasked with scheduling and publishing content, actively managing social platforms to grow online presence.",
-      "Monitor audience engagement metrics to optimize posting strategies and support the creation of marketing materials for major community events."
+      "Designed posters and promotional graphics for the chapter's relaunch and its debut event.",
+      "Shot event photography at Google Toronto HQ for an info session featuring five industry speakers."
     ],
-    tech: ["Social Media", "Design", "Content Creation", "Analytics"]
+    tech: ["Social Media", "Design", "Content Creation", "Photography"]
   },
   {
     role: "Digital Marketing & Web Lead",

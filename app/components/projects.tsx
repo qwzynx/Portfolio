@@ -21,6 +21,39 @@ const projects = [
     live: "https://zuix.ca/",
   },
   {
+    title: "Anti-FOMO",
+    date: "June 2026 – Present",
+    description:
+      "An AI-powered student hub that aggregates 200+ live internships, events, and tech news from sources like Hacker News, Simplify, and Luma into a single dashboard. Includes secure YorkU eClass integration with native Duo 2FA support via a headless Playwright login flow.",
+    image: "",
+    tech: ["Next.js", "FastAPI", "TypeScript", "Python", "Playwright", "SQLAlchemy"],
+    gradient: "from-sky-500 to-cyan-400",
+    github: "https://github.com/qwzynx/anti-fomo",
+    live: "",
+  },
+  {
+    title: "Fretnote",
+    date: "July 2026",
+    description:
+      "A local-first songbook app for guitarists, built with Svelte and Tauri to run natively on desktop and Android from one codebase. Features a visual fretboard editor, chord and tab rendering, live transposition, a built-in metronome, and PDF export — with zero backend, everything lives in an on-device SQLite database.",
+    image: "",
+    tech: ["Tauri", "Svelte", "TypeScript", "Rust", "SQLite"],
+    gradient: "from-rose-500 to-pink-400",
+    github: "https://github.com/qwzynx/fretnote",
+    live: "https://fretnote-eight.vercel.app",
+  },
+  {
+    title: "Phone-As-Webcam",
+    date: "August 2026",
+    description:
+      "A Node.js tool that turns an iPhone into a Windows webcam with no app to install — the phone opens a page in Safari and streams video peer-to-peer over WebRTC straight into OBS Studio's Virtual Camera, with no cloud service or account required.",
+    image: "",
+    tech: ["Node.js", "WebRTC", "WebSockets"],
+    gradient: "from-teal-500 to-cyan-400",
+    github: "https://github.com/qwzynx/Phone-As-Webcam",
+    live: "",
+  },
+  {
     title: "ENG1102",
     date: "March 2026 - June 2026",
     description:
@@ -46,9 +79,9 @@ const projects = [
     title: "FOMO",
     date: "April 2026",
     description:
-      "A Python-based project developed to explore specific concepts or solve a problem. It leverages Python's extensive ecosystem to deliver its functionality.",
-    image: "", 
-    tech: ["Python"],
+      "A terminal-based personal news and events digest that scrapes tech news, Hacker News, and York University event pages, scores every item against custom-weighted interest keywords, and prints a ranked dashboard of what's actually worth your attention.",
+    image: "",
+    tech: ["Python", "BeautifulSoup4", "SQLite", "Web Scraping"],
     gradient: "from-green-500 to-emerald-400",
     github: "https://github.com/qwzynx/FOMO",
     live: "",
