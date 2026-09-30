@@ -6,6 +6,18 @@ import { X } from "lucide-react";
 
 const experiences = [
   {
+    role: "Application Support Associate",
+    company: "HomeEquity Bank",
+    date: "Sep 2026 - Present",
+    location: "Toronto, Ontario, Canada · Hybrid",
+    description: "Application Support Associate Intern on the Production Enhancement team at HomeEquity Bank. I support and troubleshoot business-critical applications and help resolve production issues.",
+    bullets: [
+      "Support and troubleshoot business-critical applications on the Production Enhancement team.",
+      "Investigate and resolve production issues to maintain system reliability and minimize downtime."
+    ],
+    tech: ["C#", "Azure DevOps", "SQL Server", "Production Support"]
+  },
+  {
     role: "Brand & Content Manager",
     company: "GDG on Campus York University",
     date: "May 2026 - Present",
@@ -20,7 +32,7 @@ const experiences = [
   {
     role: "Digital Marketing & Web Lead",
     company: "ZUIX INC.",
-    date: "Sep 2024 - Present",
+    date: "Sep 2024 - Jun 2026",
     location: "Ontario, Canada · Hybrid",
     description: "Designed, developed, and launched the company's first official website (www.zuix.ca) , establishing its digital footprint by utilizing modern web frameworks like Next.js and React.",
     bullets: [

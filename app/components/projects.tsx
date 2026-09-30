@@ -11,7 +11,7 @@ import { HiExternalLink } from "react-icons/hi";
 const projects = [
   {
     title: "ZUIX INC.",
-    date: "Sep 2024 – Present",
+    date: "Sep 2024 – Jun 2026",
     description:
       "Designed and developed the official website for ZUIX INC., establishing its digital footprint with a high-performance, SEO-optimized platform. Features custom animations, secure media storage, and a serverless backend architecture.",
     image: "", 
