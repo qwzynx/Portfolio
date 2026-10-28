@@ -68,6 +68,8 @@ cd Portfolio
 npm install
 ```
 
+> **Switching between Linux and Windows?** `node_modules` holds platform-specific native binaries (SWC, Lightning CSS, Tailwind's Oxide) and OS-specific `.bin` shims, so a folder installed on one OS won't run on the other. After switching, reinstall with `rm -rf node_modules .next && npm ci`. The lockfile already covers both platforms.
+
 ### Run the dev server
 
 ```bash
