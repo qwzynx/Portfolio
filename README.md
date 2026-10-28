@@ -28,7 +28,7 @@ The source for [mahanghafarian.com](https://mahanghafarian.com) — a single-pag
 - **Scroll-snapped single page** — Hero, Skills, Experience, Projects, and Contact are laid out as snap points (`app/page.tsx`, `app/globals.css`) for a focused, slide-like scroll experience.
 - **Animated hero** — a JS-driven typewriter effect cycles through role titles ("Software Engineer.", "Security Enthusiast.", "Hardware Hacker.") next to an animated portrait (`app/components/hero.tsx`).
 - **Floating section navbar** — a fixed side nav (bottom bar on mobile) tracks scroll position with a conic-gradient progress ring, plus quick links to Experience, Projects, and Contact (`app/components/navbar.tsx`).
-- **Skills grid** — a pyramid-style layout of skill badges (Arch Linux, Python, Java, MATLAB, Supabase, React, JavaScript, HTML, CSS, Next.js) with staggered entrance animations (`app/components/skills.tsx`).
+- **Skills grid** — a pyramid-style layout of skill badges (Arch Linux, TypeScript, Java, Python, Rust, C#, React, Next.js, Svelte, Tauri, Supabase, Postgres, SQLite, Docker, Git) with staggered entrance animations (`app/components/skills.tsx`).
 - **Experience timeline with detail modal** — clicking an experience card opens an animated modal with an overview, key contributions, and a technology list (`app/components/experience.tsx`).
 - **Project showcase** — a responsive card grid with per-project GitHub/live-demo links, tech pills, and a gradient placeholder for projects without a screenshot yet (`app/components/projects.tsx`).
 - **Working contact form** — submits name/email/message directly to an inbox via [FormSubmit](https://formsubmit.co/), with pending/success states, alongside a direct email link (`app/components/contact.tsx`).
@@ -140,6 +140,6 @@ A small, self-contained HTML/CSS demo (`index.html` + `style.css`) that lives ou
 ## Contact
 
 - **Website:** [mahanghafarian.com](https://mahanghafarian.com)
-- **LinkedIn:** [Mahan Ghafarian](https://linkedin.com/in/mahan-ghafarian-b02ba0298/)
+- **LinkedIn:** [Mahan Ghafarian](https://www.linkedin.com/in/mahan-ghafarian/)
 - **GitHub:** [@qwzynx](https://github.com/qwzynx)
 - **Instagram:** [@qwzynx](https://www.instagram.com/qwzynx/)

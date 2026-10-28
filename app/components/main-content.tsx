@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "framer-motion";
 import Skills from "./skills";
-import Experience from "./experience";
-import Projects from "./projects";
-import Contact from "./contact";
 import GlitchText from "./glitch-text";
+
+const Experience = dynamic(() => import("./experience"));
+const Projects = dynamic(() => import("./projects"));
+const Contact = dynamic(() => import("./contact"));
 
 const SECTIONS = [
   { id: "skills", title: "SKILLS", subtitle: "I use arch btw" },

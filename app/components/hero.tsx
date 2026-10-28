@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
 function Typewriter({ words }: { words: string[] }) {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [currentText, setCurrentText] = useState("");
+  const [currentText, setCurrentText] = useState(words[0]);
   const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
@@ -33,7 +34,7 @@ function Typewriter({ words }: { words: string[] }) {
   return (
     <span className="text-blue-400 inline-block min-w-[120px] sm:min-w-[200px]">
       {currentText}
-      <span className="animate-pulse text-white">|</span>
+      <span className="animate-pulse text-white inline-block ml-0.5" aria-hidden="true">|</span>
     </span>
   );
 }
@@ -48,10 +49,9 @@ export default function Hero() {
     <section id="home" className="relative w-full min-h-[95dvh] flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-16 px-6 md:px-12 py-16 lg:py-0">
       {/* Left side: Text & Description */}
       <motion.div 
-        initial={{ opacity: 0, x: -30 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, margin: "0px 0px -20% 0px" }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        initial={{ opacity: 0, y: 15 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
         className="flex-1 flex flex-col items-start z-10 max-w-2xl w-full"
       >
         <p className="text-lg md:text-xl text-blue-400 font-medium tracking-wide mb-2 uppercase">Hello, I&apos;m</p>
@@ -64,8 +64,9 @@ export default function Hero() {
         </div>
         
         <p className="text-gray-400 max-w-lg leading-relaxed text-base md:text-lg">
-          I specialize in bridging the gap between elegant design and robust engineering,
-          building scalable applications that deliver exceptional user experiences.
+          Software Engineering student at York University in the Software Security stream, and
+          Application Support Intern at HomeEquity Bank. I build local-first apps and full-stack
+          web tools, and most of them start with a problem I ran into myself.
         </p>
 
         <div className="flex flex-wrap items-center gap-4 mt-8">
@@ -87,10 +88,9 @@ export default function Hero() {
 
       {/* Right side: Portrait Circle */}
       <motion.div 
-        initial={{ opacity: 0, scale: 0.8, filter: "blur(10px)" }}
-        whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-        viewport={{ once: true, margin: "0px 0px -20% 0px" }}
-        transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
         className="flex-1 w-full max-w-xl flex justify-center items-center z-10 perspective"
       >
         <div className="relative group w-48 h-48 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] animate-float">
@@ -99,13 +99,14 @@ export default function Hero() {
           
           {/* The Circle Container */}
           <div className="relative w-full h-full rounded-full p-1 bg-linear-to-bl from-blue-400 via-indigo-500 to-purple-500 shadow-[0_0_40px_rgba(59,130,246,0.3)] group-hover:shadow-[0_0_60px_rgba(168,85,247,0.4)] group-hover:scale-[1.02] hover:-rotate-2 transition-all duration-700">
-            <div className="w-full h-full rounded-full bg-[#0a0a0a] flex flex-col items-center justify-center overflow-hidden border-4 border-[#0a0a0a] relative">
-              
-              {/* Using standard img for this specific container to ensure visibility */}
-              <img 
-                src="/portrait.jpg" 
+            <div className="relative w-full h-full rounded-full bg-[#0a0a0a] flex flex-col items-center justify-center overflow-hidden border-4 border-[#0a0a0a]">
+              <Image 
+                src="/portrait.webp" 
                 alt="Mahan Ghafarian" 
-                className="w-full h-full object-cover object-[center_30%] opacity-90 group-hover:opacity-100 transition-all duration-700" 
+                fill
+                sizes="(max-width: 640px) 192px, (max-width: 768px) 288px, (max-width: 1024px) 384px, 448px"
+                preload={true}
+                className="object-cover object-[center_30%] opacity-90 group-hover:opacity-100 transition-all duration-700" 
               />
             </div>
           </div>
@@ -122,7 +123,7 @@ export default function Hero() {
         aria-label="Scroll to content"
       >
         <span className="text-[10px] uppercase tracking-[0.3em] font-bold">Scroll</span>
-        <ChevronDown size={18} className="animate-bounce" />
+        <ChevronDown size={18} className="animate-bounce" aria-hidden="true" />
       </motion.a>
     </section>
   );

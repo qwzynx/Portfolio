@@ -18,7 +18,7 @@ export default function GlitchText({ text, className, interval = 30 }: GlitchTex
     const maxIterations = text.length;
     
     const animInterval = setInterval(() => {
-      setDisplayText((prev) =>
+      setDisplayText(() =>
         text
           .split("")
           .map((char, index) => {

@@ -56,19 +56,22 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-linear-to-tr from-blue-600/5 to-purple-600/5 blur-[80px] sm:blur-[120px] rounded-full pointer-events-none animate-glow-pulse" />
 
-      {/* Section heading */}
-      <motion.div 
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className={`flex flex-col items-start w-full mb-6 sm:mb-10 ${hideTitle ? "hidden" : "lg:w-1/3 lg:sticky lg:top-32"}`}
-      >
-        <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
-          Contact
-        </h2>
-        <p className="text-blue-400 mt-2 sm:mt-4 text-[10px] sm:text-sm md:text-base uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold text-left">Get in touch</p>
-      </motion.div>
+      {hideTitle ? (
+        <h2 className="sr-only">Contact</h2>
+      ) : (
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col items-start w-full mb-6 sm:mb-10 lg:w-1/3 lg:sticky lg:top-32"
+        >
+          <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
+            Contact
+          </h2>
+          <p className="text-blue-400 mt-2 sm:mt-4 text-[10px] sm:text-sm md:text-base uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold text-left">Get in touch</p>
+        </motion.div>
+      )}
 
       <div className="w-full flex flex-col lg:flex-row gap-6 sm:gap-12 lg:gap-20 items-center lg:items-stretch relative z-10">
         {/* ─── LEFT SIDE ─── */}
@@ -87,7 +90,7 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
           {/* Email info */}
           <div className="flex items-center justify-center lg:justify-start gap-3 sm:gap-4 group cursor-default">
             <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center group-hover:bg-blue-500/10 group-hover:border-blue-500/30 transition-all duration-500 shadow-lg shrink-0">
-              <FaEnvelope className="text-blue-400 group-hover:scale-110 transition-transform duration-300 text-xs sm:text-base" />
+              <FaEnvelope className="text-blue-400 group-hover:scale-110 transition-transform duration-300 text-xs sm:text-base" aria-hidden="true" />
             </div>
             <div className="text-left">
               <p className="text-[10px] text-gray-500 uppercase tracking-[0.2em] font-bold mb-0.5">Direct Email</p>
@@ -170,7 +173,7 @@ export default function Contact({ hideTitle = false }: { hideTitle?: boolean }) 
                   <>Sending...</>
                 ) : (
                   <>
-                    <FaPaperPlane size={12} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                    <FaPaperPlane size={12} className="group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" aria-hidden="true" />
                     Send Message
                   </>
                 )}

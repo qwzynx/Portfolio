@@ -10,115 +10,170 @@ import { HiExternalLink } from "react-icons/hi";
 // Set image to e.g. "/projects/zuix.jpg"; empty string shows a gradient placeholder.
 const projects = [
   {
-    title: "ZUIX INC.",
-    date: "Sep 2024 – Jun 2026",
-    description:
-      "Designed and developed the official website for ZUIX INC., establishing its digital footprint with a high-performance, SEO-optimized platform. Features custom animations, secure media storage, and a serverless backend architecture.",
-    image: "", 
-    tech: ["Next.js", "React", "Supabase", "Vanilla CSS", "Cloudflare"],
-    gradient: "from-blue-600 to-indigo-500",
-    github: "",
-    live: "https://zuix.ca/",
-  },
-  {
-    title: "Anti-FOMO",
-    date: "June 2026 – Present",
-    description:
-      "An AI-powered student hub that aggregates 200+ live internships, events, and tech news from sources like Hacker News, Simplify, and Luma into a single dashboard. Includes secure YorkU eClass integration with native Duo 2FA support via a headless Playwright login flow.",
-    image: "",
-    tech: ["Next.js", "FastAPI", "TypeScript", "Python", "Playwright", "SQLAlchemy"],
-    gradient: "from-sky-500 to-cyan-400",
-    github: "https://github.com/qwzynx/anti-fomo",
-    live: "",
-  },
-  {
     title: "Fretnote",
-    date: "July 2026",
+    date: "Jul 2026 – Present",
     description:
-      "A local-first songbook app for guitarists, built with Svelte and Tauri to run natively on desktop and Android from one codebase. Features a visual fretboard editor, chord and tab rendering, live transposition, a built-in metronome, and PDF export — with zero backend, everything lives in an on-device SQLite database.",
+      "A local-first songbook for guitarists, shipped from one codebase to Linux, Windows, macOS and Android. Chord sheets with auto-rendered diagrams, a fretboard tab editor, transposition with capo tracking, 8 tunings, a metronome and PDF export. No backend or account: everything lives in on-device SQLite, and a tag push builds every platform in CI.",
     image: "",
-    tech: ["Tauri", "Svelte", "TypeScript", "Rust", "SQLite"],
+    tech: ["Svelte 5", "TypeScript", "Tauri 2", "Rust", "SQLite", "GitHub Actions"],
     gradient: "from-rose-500 to-pink-400",
     github: "https://github.com/qwzynx/fretnote",
     live: "https://fretnote-eight.vercel.app",
   },
   {
-    title: "Phone-As-Webcam",
-    date: "August 2026",
+    title: "Clauto",
+    date: "2026 – Present",
     description:
-      "A Node.js tool that turns an iPhone into a Windows webcam with no app to install — the phone opens a page in Safari and streams video peer-to-peer over WebRTC straight into OBS Studio's Virtual Camera, with no cloud service or account required.",
+      "A self-hosted layer between me and AI coding CLIs. It estimates each prompt's cost against rolling usage limits with a regression fitted on my own runs, and runs an autopilot over a Kanban board: each card gets its own branch, must pass the test suite, and is committed as me, with no force-push. Every step is journaled to SQLite so interrupted sessions resume.",
     image: "",
-    tech: ["Node.js", "WebRTC", "WebSockets"],
-    gradient: "from-teal-500 to-cyan-400",
-    github: "https://github.com/qwzynx/Phone-As-Webcam",
-    live: "",
-  },
-  {
-    title: "ENG1102",
-    date: "March 2026 - June 2026",
-    description:
-      "A Java-based engineering project developed as part of the ENG1102 curriculum, focusing on object-oriented programming and engineering principles.",
-    image: "", 
-    tech: ["Java", "Arduino Uno"],
-    gradient: "from-orange-500 to-yellow-400",
-    github: "https://github.com/qwzynx/ENG1102",
-    live: "",
-  },
-  {
-    title: "ENG2003 Portfolio",
-    date: "Aug 2026",
-    description:
-      "A communication portfolio built for ENG2003 (Effective Engineering Communication) at York University's Lassonde School of Engineering, showcasing a technical report, tailored handouts, a cover letter, and hardware documentation alongside reflective writing on audience-focused design.",
-    image: "",
-    tech: ["Vite", "HTML", "CSS", "JavaScript", "GitHub Pages", "Vercel"],
-    gradient: "from-violet-500 to-fuchsia-400",
+    tech: ["Node.js", "TypeScript", "Hono", "Svelte 5", "SQLite", "Electron", "PWA"],
+    gradient: "from-amber-500 to-orange-400",
     github: "",
-    live: "https://eng2003.mahanghafarian.com",
-  },
-  {
-    title: "Pico-Ducky3.0",
-    date: "May 2026",
-    description:
-      "A project that transforms a Raspberry Pi Pico into a USB Rubber Ducky-like device, enabling the execution of automated keystroke payloads for security testing and automation tasks.",
-    image: "", 
-    tech: ["Python", "Raspberry Pi Pico", "Hardware"],
-    gradient: "from-red-500 to-orange-400",
-    github: "https://github.com/qwzynx/Pico-Ducky3.0",
-    live: "",
-  },
-  {
-    title: "FOMO",
-    date: "April 2026",
-    description:
-      "A terminal-based personal news and events digest that scrapes tech news, Hacker News, and York University event pages, scores every item against custom-weighted interest keywords, and prints a ranked dashboard of what's actually worth your attention.",
-    image: "",
-    tech: ["Python", "BeautifulSoup4", "SQLite", "Web Scraping"],
-    gradient: "from-green-500 to-emerald-400",
-    github: "https://github.com/qwzynx/FOMO",
     live: "",
   },
   {
     title: "GradeMatrix",
-    date: "March 2026",
+    date: "Mar 2026 – Present",
     description:
-      "A modern, intuitive grade calculator designed to help students track their academic progress. It allows users to easily input assignments, manage course weights, and calculate their current standing or target grades.",
+      "A full-stack grade tracker. Gemini parses a PDF syllabus into weighted assignments, and eClass Sync logs into York's portal with headless Playwright, streams Duo 2FA status live, and shows a diff of grade changes before anything is written. Dual-scale GPA (4.0 and 9.0), a target-grade planner, charts, row-level security, and built-in accessibility settings.",
     image: "",
-    tech: ["Next.js", "React", "TypeScript", "TailwindCSS"],
+    tech: ["Next.js 16", "React 19", "TypeScript", "Supabase", "Gemini API", "Playwright"],
     gradient: "from-purple-500 to-indigo-500",
     github: "https://github.com/qwzynx/GradeCalc",
     live: "https://grade-calc-nine.vercel.app",
   },
   {
+    title: "Anti-FOMO",
+    date: "Jun 2026 – Present",
+    description:
+      "Internships, tech news and events from 10 live sources (Hacker News, Simplify, Levels.fyi, Luma and more) in one ranked, offline-first feed. Rewritten from a Next.js + FastAPI service into a single Tauri app where scraping, ranking and storage all run on-device in Rust, with per-source caps and quiet degradation when a source breaks.",
+    image: "",
+    tech: ["Tauri 2", "Svelte 5", "Rust", "SQLite"],
+    gradient: "from-sky-500 to-cyan-400",
+    github: "https://github.com/qwzynx/anti-fomo",
+    live: "",
+  },
+  {
+    title: "Pico-Ducky 3.0",
+    date: "May 2026",
+    description:
+      "A fork of pico-ducky that turns a Raspberry Pi Pico 2W into a USB Rubber Ducky-style HID device. I rewrote large parts of the DuckyScript 3.0 interpreter and its companion web app, reworked pin and board handling, and added my own payload extensions (~3,000 lines across ~28 files), then used it to study physical-access attacks and endpoint hardening in a lab.",
+    image: "",
+    tech: ["Python", "CircuitPython", "Raspberry Pi Pico 2W", "HID"],
+    gradient: "from-red-500 to-orange-400",
+    github: "https://github.com/qwzynx/pico-ducky3.0",
+    live: "",
+  },
+  {
+    title: "ZUIX INC.",
+    date: "Sep 2024 – Jun 2026",
+    description:
+      "The first production website for a premium construction and renovation firm. A filterable project gallery with per-project pages, a site-wide estimate-request flow, and a password-protected admin dashboard with full CRUD, secured with HMAC-signed httpOnly session cookies. Runs on Edge API routes with continuous deployment.",
+    image: "",
+    tech: ["Next.js 16", "React 19", "Supabase", "Cloudflare Pages", "CSS"],
+    gradient: "from-blue-600 to-indigo-500",
+    github: "",
+    live: "https://zuix.ca/",
+  },
+  {
     title: "Undercut",
     date: "Jan 2026 – Feb 2026",
     description:
-      "Undercut is a full-stack AI platform designed to identify underpriced vehicle listings in real-time. Built during a hackathon, it leverages high-performance data scrapers to rapidly collect market data, which is then analyzed using advanced AI to spot the best deals instantly.",
+      "An AI used-car deal finder for the GTA that scrapes listings, calculates fair market value, grades deals S to F, flags red flags in seller descriptions with Gemini, and writes negotiation scripts. I led the front-end team in a group of 5, owning a library of 20+ accessible UI components and the shared type contract with the FastAPI backend.",
     image: "",
-    tech: ["Next.js", "React", "AI", "Python", "Data Scraping"],
+    tech: ["Next.js 14", "TypeScript", "FastAPI", "PostgreSQL", "Go", "Gemini"],
     gradient: "from-blue-500 to-indigo-400",
-    github: "", 
+    github: "https://github.com/SoroushRF/Undercut",
     live: "https://undercut-seven.vercel.app/",
-  }
+  },
+  {
+    title: "Phone-As-Webcam",
+    date: "Aug 2026",
+    description:
+      "Turns an iPhone into a Windows webcam with no app, cloud service or account. Safari streams peer-to-peer over WebRTC into OBS's Virtual Camera, with a WebSocket signaling relay, an auto-generated self-signed HTTPS cert for LAN camera access, and QR-code pairing in the terminal.",
+    image: "",
+    tech: ["Node.js", "WebRTC", "WebSockets", "OBS Studio"],
+    gradient: "from-teal-500 to-cyan-400",
+    github: "https://github.com/qwzynx/Phone-As-Webcam",
+    live: "",
+  },
+  {
+    title: "Trillium Pastry",
+    date: "Oct 2026",
+    description:
+      "A showcase site for a handmade cake-topper business, reached through QR codes on event tables. Orders are emailed through Resend from a Cloudflare Function, with token-based theming, structured data, link previews and cookieless analytics. I also made the brand assets and set up the custom domain.",
+    image: "",
+    tech: ["Astro", "Cloudflare Pages", "Cloudflare Functions", "Resend"],
+    gradient: "from-lime-500 to-emerald-400",
+    github: "",
+    live: "https://trilliumpastry.ca",
+  },
+  {
+    title: "MG Studio",
+    date: "2026",
+    description:
+      "My photo and video portfolio, built around a camera and cinema visual language: letterbox bars, a viewfinder HUD hero, film grain, photo collections as film canisters, and a video editing timeline. Includes a booking form, structured data and reduced-motion fallbacks.",
+    image: "",
+    tech: ["Next.js 16", "React 19", "TypeScript", "Framer Motion"],
+    gradient: "from-zinc-400 to-slate-500",
+    github: "https://github.com/qwzynx/studio",
+    live: "https://studio.mahanghafarian.com",
+  },
+  {
+    title: "Course Tutors",
+    date: "Summer 2026",
+    description:
+      "Two study apps I built for my own courses. Circuits Tutor (EECS 2200) has 10 lesson tracks, a 57-problem bank with tolerance-checked phasor answers, 4 interactive circuit simulators and Leitner flashcards. Logic Tutor (MATH 1090) covers 23 lessons with truth-table and proof drills and a timed mock exam. Both run fully client-side.",
+    image: "",
+    tech: ["Next.js 16", "React 19", "TypeScript", "KaTeX"],
+    gradient: "from-yellow-500 to-amber-400",
+    github: "",
+    live: "",
+  },
+  {
+    title: "opencode for Journalling",
+    date: "2026",
+    description:
+      "A local-LLM journalling companion for an Obsidian vault, built around a 4B model on a 6 GB GPU. Wherever code can do the job, it does: a plugin picks each turn's questions, scripts copy my own sentences into notes, and a check script verifies every write before it counts as done.",
+    image: "",
+    tech: ["opencode", "Ollama", "Bash", "JavaScript", "Obsidian"],
+    gradient: "from-indigo-500 to-violet-400",
+    github: "",
+    live: "",
+  },
+  {
+    title: "FOMO",
+    date: "Apr 2026",
+    description:
+      "The terminal predecessor to Anti-FOMO. Scrapes five news and event sources, scores items with weighted keyword tiers and time-proximity boosts, deep-scans embedded event JSON, and prints a ranked dashboard, deduplicated across runs in SQLite.",
+    image: "",
+    tech: ["Python", "BeautifulSoup4", "cloudscraper", "SQLite"],
+    gradient: "from-green-500 to-emerald-400",
+    github: "https://github.com/qwzynx/FOMO",
+    live: "",
+  },
+  {
+    title: "FocusBox",
+    date: "Mar 2026 – Jun 2026",
+    description:
+      "A physical study timer for ENG 1102 that detects when you pick your phone back up, using light and motion sensors in a 3D-printed enclosure.",
+    image: "",
+    tech: ["Java", "Arduino Uno", "Sensors", "3D Printing"],
+    gradient: "from-orange-500 to-yellow-400",
+    github: "https://github.com/qwzynx/ENG1102",
+    live: "",
+  },
+  {
+    title: "ENG 2003 Portfolio",
+    date: "Aug 2026",
+    description:
+      "A communication portfolio for Effective Engineering Communication at Lassonde: a Zero Trust IoT firmware report, two audience-tailored handouts, a cover letter and FocusBox hardware documentation, alongside reflective writing.",
+    image: "",
+    tech: ["Vite", "HTML", "CSS", "JavaScript", "GitHub Pages"],
+    gradient: "from-violet-500 to-fuchsia-400",
+    github: "",
+    live: "https://eng2003.mahanghafarian.com",
+  },
 ];
 
 // Project Card Component
@@ -170,7 +225,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                 className="text-gray-400 hover:text-white transition-colors duration-200"
                 aria-label={`${project.title} GitHub`}
               >
-                <FaGithub size={20} />
+                <FaGithub size={20} aria-hidden="true" />
               </a>
             )}
             {project.live && (
@@ -181,7 +236,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
                 className="text-gray-400 hover:text-blue-400 transition-colors duration-200"
                 aria-label={`${project.title} Live Demo`}
               >
-                <HiExternalLink size={22} />
+                <HiExternalLink size={22} aria-hidden="true" />
               </a>
             )}
           </div>
@@ -214,18 +269,22 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 export default function Projects({ hideTitle = false }: { hideTitle?: boolean }) {
   return (
     <section id="projects" className="scroll-mt-6 w-full flex flex-col items-start z-10 relative">
-      <motion.div 
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className={`flex flex-col items-start mb-10 ${hideTitle ? "hidden" : "lg:w-1/3 lg:sticky lg:top-32"}`}
-      >
-        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
-          Projects
-        </h2>
-        <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-left">Recent work</p>
-      </motion.div>
+      {hideTitle ? (
+        <h2 className="sr-only">Projects</h2>
+      ) : (
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col items-start mb-10 lg:w-1/3 lg:sticky lg:top-32"
+        >
+          <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
+            Projects
+          </h2>
+          <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-left">Recent work</p>
+        </motion.div>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 w-full">
         {projects.map((project, index) => (

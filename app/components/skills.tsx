@@ -2,41 +2,58 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { FaPython, FaJava, FaReact, FaHtml5, FaCss3Alt } from "react-icons/fa";
-import { SiJavascript, SiArchlinux, SiSupabase, SiNextdotjs } from "react-icons/si";
+import { FaPython, FaJava, FaReact, FaGitAlt } from "react-icons/fa";
+import {
+  SiArchlinux,
+  SiTypescript,
+  SiRust,
+  SiNextdotjs,
+  SiSvelte,
+  SiTauri,
+  SiSupabase,
+  SiPostgresql,
+  SiSqlite,
+  SiDocker,
+} from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
 
 const skills = [
   { name: "Arch Linux", icon: SiArchlinux, color: "text-[#1793D1]" },
-  { name: "Python", icon: FaPython, color: "text-[#3776AB]" },
+  { name: "TypeScript", icon: SiTypescript, color: "text-[#3178C6]" },
   { name: "Java", icon: FaJava, color: "text-[#007396]" },
-  { 
-    name: "MATLAB", 
-    icon: () => <div className="font-serif italic font-bold tracking-tighter" style={{ fontSize: '1.2em', lineHeight: 1 }}>M</div>, 
-    color: "text-[#e16524]" 
-  },
-  { name: "Supabase", icon: SiSupabase, color: "text-[#3ECF8E]" },
+  { name: "Python", icon: FaPython, color: "text-[#3776AB]" },
+  { name: "Rust", icon: SiRust, color: "text-[#DEA584]" },
+  { name: "C#", icon: TbBrandCSharp, color: "text-[#9B4F96]" },
   { name: "React", icon: FaReact, color: "text-[#61DAFB]" },
-  { name: "Javascript", icon: SiJavascript, color: "text-[#F7DF1E]" },
-  { name: "HTML", icon: FaHtml5, color: "text-[#E34F26]" },
-  { name: "CSS", icon: FaCss3Alt, color: "text-[#1572B6]" },
   { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
+  { name: "Svelte", icon: SiSvelte, color: "text-[#FF3E00]" },
+  { name: "Tauri", icon: SiTauri, color: "text-[#FFC131]" },
+  { name: "Supabase", icon: SiSupabase, color: "text-[#3ECF8E]" },
+  { name: "Postgres", icon: SiPostgresql, color: "text-[#4169E1]" },
+  { name: "SQLite", icon: SiSqlite, color: "text-[#4FA3D9]" },
+  { name: "Docker", icon: SiDocker, color: "text-[#2496ED]" },
+  { name: "Git", icon: FaGitAlt, color: "text-[#F05032]" },
 ];
 
 export default function Skills({ hideTitle = false }: { hideTitle?: boolean }) {
   return (
     <section id="skills" className="w-full flex flex-col items-start z-10 relative">
-      <motion.div 
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className={`flex flex-col items-start mb-10 ${hideTitle ? "hidden" : "lg:w-1/3 lg:sticky lg:top-32"}`}
-      >
-        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white">
-          SKILLS
-        </h2>
-        <p className="text-blue-400 mt-4 text-sm md:text-base italic font-semibold tracking-widest uppercase text-left">I use arch btw</p>
-      </motion.div>
+      {hideTitle ? (
+        <h2 className="sr-only">Skills</h2>
+      ) : (
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col items-start mb-10 lg:w-1/3 lg:sticky lg:top-32"
+        >
+          <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white">
+            SKILLS
+          </h2>
+          <p className="text-blue-400 mt-4 text-sm md:text-base italic font-semibold tracking-widest uppercase text-left">I use arch btw</p>
+        </motion.div>
+      )}
       
       <div className="flex flex-col items-center gap-4 sm:gap-6 w-full overflow-visible">
         {/* Bowling Pin Layout (Pyramid) 
@@ -44,9 +61,10 @@ export default function Skills({ hideTitle = false }: { hideTitle?: boolean }) {
             Row 2: 2 skills
             Row 3: 3 skills
             Row 4: 4 skills
+            Row 5: 5 skills
         */}
-        {[1, 2, 3, 4].map((rowCount, rowIndex) => {
-          // Calculation for starting index: 0, 1, 3, 6
+        {[1, 2, 3, 4, 5].map((rowCount, rowIndex) => {
+          // Calculation for starting index: 0, 1, 3, 6, 10
           const startIndex = (rowIndex * (rowIndex + 1)) / 2;
           const rowSkills = skills.slice(startIndex, startIndex + rowCount);
           
@@ -73,7 +91,7 @@ export default function Skills({ hideTitle = false }: { hideTitle?: boolean }) {
                       className={`relative z-10 text-2xl sm:text-3xl md:text-4xl ${skill.color} mb-1 sm:mb-2 md:mb-3 group-hover:scale-110 group-hover:-rotate-3 transition-all duration-300 drop-shadow-lg flex items-center justify-center h-8 sm:h-10 animate-float-subtle`}
                       style={{ animationDelay: `${totalIndex * 0.15}s` }}
                     >
-                      <skill.icon />
+                      <skill.icon aria-hidden="true" />
                     </div>
                     <span className="relative z-10 text-[9px] sm:text-[10px] md:text-xs font-semibold text-gray-400 group-hover:text-white transition-colors duration-300 tracking-wide text-center uppercase">
                       {skill.name}

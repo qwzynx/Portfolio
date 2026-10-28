@@ -41,6 +41,7 @@ export default function Navbar() {
             href="#home"
             className="text-white text-2xl font-bold tracking-tighter"
             style={{ fontFamily: 'var(--font-inter-tight)' }}
+            aria-label="Mahan Ghafarian Home"
           >
             MG
           </a>
@@ -52,16 +53,18 @@ export default function Navbar() {
             href="#experience"
             className="hover:text-white transition-colors duration-300 tracking-widest text-xs md:text-sm font-medium uppercase md:capitalize writing-v-rl"
             title="Experience"
+            aria-label="Experience"
           >
-            <span className="md:hidden"><FaBriefcase size={20} /></span>
+            <span className="md:hidden"><FaBriefcase size={20} aria-hidden="true" /></span>
             <span className="hidden md:inline">Exp<span className="hidden lg:inline">erience</span></span>
           </a>
           <a
             href="#projects"
             className="hover:text-white transition-colors duration-300 tracking-widest text-xs md:text-sm font-medium uppercase md:capitalize writing-v-rl"
             title="Projects"
+            aria-label="Projects"
           >
-            <span className="md:hidden"><FaCode size={20} /></span>
+            <span className="md:hidden"><FaCode size={20} aria-hidden="true" /></span>
             <span className="hidden md:inline">Proj<span className="hidden lg:inline">ects</span></span>
           </a>
           <a
@@ -69,8 +72,9 @@ export default function Navbar() {
             onClick={scrollToBottom}
             className="hover:text-white transition-colors duration-300 tracking-widest text-xs md:text-sm font-medium uppercase md:capitalize writing-v-rl"
             title="Contact"
+            aria-label="Contact"
           >
-            <span className="md:hidden"><FaEnvelope size={20} /></span>
+            <span className="md:hidden"><FaEnvelope size={20} aria-hidden="true" /></span>
             <span className="hidden md:inline">Contact</span>
           </a>
         </div>
@@ -80,14 +84,14 @@ export default function Navbar() {
 
         {/* Social Icons */}
         <div className="flex flex-row md:flex-col gap-4 md:gap-4 items-center text-gray-400">
-          <a href="https://www.instagram.com/qwzynx/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">
-            <FaInstagram size={18} className="md:w-5 md:h-5 w-4.5 h-4.5" />
+          <a href="https://www.instagram.com/qwzynx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-white transition-colors duration-300">
+            <FaInstagram size={18} className="md:w-5 md:h-5 w-4.5 h-4.5" aria-hidden="true" />
           </a>
-          <a href="https://www.linkedin.com/in/mahan-ghafarian-b02ba0298/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">
-            <FaLinkedin size={18} className="md:w-5 md:h-5 w-4.5 h-4.5" />
+          <a href="https://www.linkedin.com/in/mahan-ghafarian/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-white transition-colors duration-300">
+            <FaLinkedin size={18} className="md:w-5 md:h-5 w-4.5 h-4.5" aria-hidden="true" />
           </a>
-          <a href="https://github.com/qwzynx" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors duration-300">
-            <FaGithub size={18} className="md:w-5 md:h-5 w-4.5 h-4.5" />
+          <a href="https://github.com/qwzynx" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-white transition-colors duration-300">
+            <FaGithub size={18} className="md:w-5 md:h-5 w-4.5 h-4.5" aria-hidden="true" />
           </a>
         </div>
       </nav>

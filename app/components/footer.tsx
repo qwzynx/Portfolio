@@ -7,13 +7,13 @@ export default function Footer() {
         <p className="text-gray-500 text-sm">© 2026 Mahan Ghafarian</p>
         <div className="flex items-center gap-5 text-gray-500">
           <a href="https://www.instagram.com/qwzynx/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-white transition-colors duration-300">
-            <FaInstagram size={18} />
+            <FaInstagram size={18} aria-hidden="true" />
           </a>
-          <a href="https://www.linkedin.com/in/mahan-ghafarian-b02ba0298/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-white transition-colors duration-300">
-            <FaLinkedin size={18} />
+          <a href="https://www.linkedin.com/in/mahan-ghafarian/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-white transition-colors duration-300">
+            <FaLinkedin size={18} aria-hidden="true" />
           </a>
           <a href="https://github.com/qwzynx" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-white transition-colors duration-300">
-            <FaGithub size={18} />
+            <FaGithub size={18} aria-hidden="true" />
           </a>
         </div>
       </div>

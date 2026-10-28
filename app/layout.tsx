@@ -6,11 +6,13 @@ import "./globals.css";
 const interTight = Inter_Tight({
   subsets: ["latin"],
   variable: "--font-inter-tight",
+  display: "swap",
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
 
 export const viewport: Viewport = {
@@ -22,8 +24,8 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://mahanghafarian.com"),
   title: "Mahan Ghafarian | Software Engineer & Security Enthusiast",
-  description: "Portfolio of Mahan Ghafarian, a Software Engineer specializing in Software Security, Hardware Hacking, and Full-Stack Development. York University Engineering student and developer of Pico-Ducky3.0.",
-  keywords: ["Mahan Ghafarian", "Software Engineer", "Software Security", "Hardware Hacking", "DuckyScript", "Pico-Ducky", "Next.js", "React", "TypeScript", "York University Engineering", "GDG York"],
+  description: "Portfolio of Mahan Ghafarian, a York University Software Engineering student (Software Security stream) and Application Support Intern at HomeEquity Bank, building local-first apps, full-stack web tools, and embedded security projects.",
+  keywords: ["Mahan Ghafarian", "Software Engineer", "Software Security", "York University", "Lassonde", "HomeEquity Bank", "C#", ".NET", "Next.js", "React", "Svelte", "Tauri", "Rust", "TypeScript", "Local-first", "Fretnote", "Pico-Ducky", "GDG York"],
   authors: [{ name: "Mahan Ghafarian" }],
   creator: "Mahan Ghafarian",
   openGraph: {
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://mahanghafarian.com",
     title: "Mahan Ghafarian | Software Engineer & Security Enthusiast",
-    description: "Software Engineer specializing in Software Security and Hardware Hacking. York University Engineering student and developer of Pico-Ducky3.0.",
+    description: "York University Software Engineering student (Software Security stream) and Application Support Intern at HomeEquity Bank, building local-first apps and full-stack web tools.",
     siteName: "Mahan Ghafarian Portfolio",
     images: [
       {
@@ -45,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Mahan Ghafarian | Software Engineer & Security Enthusiast",
-    description: "Software Engineer specializing in Software Security and Hardware Hacking. York University Engineering student and developer of Pico-Ducky3.0.",
+    description: "York University Software Engineering student (Software Security stream) and Application Support Intern at HomeEquity Bank, building local-first apps and full-stack web tools.",
     images: ["/portrait.jpg"],
     creator: "@qwzynx",
   },
@@ -83,11 +85,11 @@ export default function RootLayout({
     "image": "https://mahanghafarian.com/portrait.jpg",
     "sameAs": [
       "https://github.com/qwzynx",
-      "https://linkedin.com/in/mahan-ghafarian-b02ba0298/",
+      "https://www.linkedin.com/in/mahan-ghafarian/",
       "https://www.instagram.com/qwzynx/"
     ],
     "jobTitle": "Software Engineer",
-    "description": "Software Engineer specializing in Software Security, Hardware Hacking, and Full-Stack Development. York University Engineering student and developer of Pico-Ducky3.0.",
+    "description": "York University Software Engineering student (Software Security stream) and Application Support Intern at HomeEquity Bank, building local-first apps and full-stack web tools.",
   };
 
   return (

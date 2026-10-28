@@ -6,77 +6,83 @@ import { X } from "lucide-react";
 
 const experiences = [
   {
-    role: "Application Support Associate",
+    role: "Application Support Associate Intern",
     company: "HomeEquity Bank",
     date: "Sep 2026 - Present",
     location: "Toronto, Ontario, Canada · Hybrid",
-    description: "Application Support Associate Intern on the Production Enhancement team at HomeEquity Bank. I support and troubleshoot business-critical applications and help resolve production issues.",
+    description: "Fixing defects and shipping features in the bank's C#/ASP.NET MVC web applications and REST API, which serve customers, internal staff and partner firms.",
     bullets: [
-      "Support and troubleshoot business-critical applications on the Production Enhancement team.",
-      "Investigate and resolve production issues to maintain system reliability and minimize downtime."
+      "Resolve production defects and deliver user stories by tracing issues through controllers, view models, validators and Razor views, then demoing fixes to business stakeholders.",
+      "Reworked referral-program eligibility logic so referrals are validated against every linked customer file, and adjusted the UI so the option only appears where it applies.",
+      "Added layered duplicate-contact validation to the customer portal: clear form-level messages plus a business-layer check that only runs when contact details change.",
+      "Extended a shared reporting method so payout statements correctly include borrower estates, verifying that dependent reports were unaffected.",
+      "Ship in Azure DevOps sprints (Boards, Pipelines, TFVC) with daily standups and code review on every change, ramping up from almost no prior C# or SQL experience."
     ],
-    tech: ["C#", "Azure DevOps", "SQL Server", "Production Support"]
+    tech: ["C#", "ASP.NET MVC", "Razor", "REST APIs", "SQL Server", "Entity Framework", "Postman", "Azure DevOps", "TFVC"]
   },
   {
     role: "Brand & Content Manager",
     company: "GDG on Campus York University",
     date: "May 2026 - Present",
     location: "Toronto, Ontario, Canada",
-    description: "A chapter that restarted this year. Designed the posters and promotional graphics for the relaunch and for the chapter's first event, an info session at Google Toronto HQ with five industry speakers, and shot the photography for the day.",
+    description: "Leading brand and content for York's student developer community, from event graphics to photo and video coverage.",
     bullets: [
-      "Designed posters and promotional graphics for the chapter's relaunch and its debut event.",
-      "Shot event photography at Google Toronto HQ for an info session featuring five industry speakers."
+      "Shot and edited photo and video coverage of the chapter's first flagship event at Google's Canadian headquarters, used for promotion and recruitment.",
+      "Design posters, event graphics and post-event recaps, keeping the visual identity consistent across platforms.",
+      "Coordinate the publishing schedule with the executive team and use engagement metrics to tune posting strategy."
     ],
-    tech: ["Social Media", "Design", "Content Creation", "Photography"]
+    tech: ["Brand Design", "Content Creation", "Photography", "Videography", "Social Media"]
   },
   {
     role: "Digital Marketing & Web Lead",
     company: "ZUIX INC.",
     date: "Sep 2024 - Jun 2026",
     location: "Ontario, Canada · Hybrid",
-    description: "Designed, developed, and launched the company's first official website (www.zuix.ca) , establishing its digital footprint by utilizing modern web frameworks like Next.js and React.",
+    description: "Designed, built and shipped the first production website (zuix.ca) for a premium construction and renovation firm, owning it from requirements through deployment, and led the brand's content.",
     bullets: [
-      "Directed end-to-end content creation by shooting, editing, and publishing high-quality photo and video assets to establish the brand's foundational social media presence.",
-      "Advised company leadership on social media strategy, providing constructive feedback on content creation to improve overall quality and brand consistency."
+      "Built the site end to end with Next.js 16, React 19 and Supabase on Cloudflare Pages, with continuous deployment and a documented handoff.",
+      "Built a password-protected admin dashboard with full CRUD for portfolio projects, authenticated with HMAC-signed httpOnly session cookies and no third-party auth provider.",
+      "Replaced a manual intake process with a validated, site-wide estimate-request flow, plus a filterable project gallery, per-project pages and generated SEO routes.",
+      "Directed end-to-end photo and video content that launched the brand's social media, and advised leadership on social strategy."
     ],
-    tech: ["Next.js", "React"]
+    tech: ["Next.js", "React", "Supabase", "Cloudflare Pages", "Web Crypto", "SEO", "Photography"]
   },
   {
-    role: "Visual Content Creator",
+    role: "Freelance Photographer & Videographer",
     company: "F.O.R.M. Basketball Academy",
     date: "Nov 2025 - Jan 2026",
     location: "Toronto, Ontario, Canada · On-site",
-    description: "Directed end-to-end media production for FORM Basketball Academy during their high-stakes matchup against the University of Toronto and team training sessions at the OVO Athletic Centre.",
+    description: "Shot and delivered event photo and video for F.O.R.M. Basketball Academy at the OVO Athletic Centre.",
     bullets: [
-      "Captured and edited dynamic, high-quality photography and videography, tailoring the final assets to the client's brand and vision.",
-      "Delivered highly engaging sports content that was successfully leveraged across the academy's official social media channels to drive audience engagement."
+      "Captured brand-consistent visuals of high-energy team events in fast-changing, high-pressure conditions.",
+      "Coordinated media goals with coaches and staff, and handled equipment setup and on-the-spot troubleshooting for uninterrupted coverage."
     ],
-    tech: ["Photography", "Videography", "Media Production"]
+    tech: ["Photography", "Videography", "Editing"]
   },
   {
     role: "Computer Science Tutor",
     company: "Bayview Secondary School",
-    date: "Sep 2023 - Jul 2025",
+    date: "Sep 2023 - Jun 2025",
     location: "Richmond Hill, Ontario, Canada · On-site",
-    description: "Conducted one-on-one tutoring sessions, identifying student knowledge gaps to provide targeted solutions and improve comprehension.",
+    description: "Volunteer one-on-one computer science tutoring through the school's Computer Science Department.",
     bullets: [
-      "Developed connections with peers through active listening, patience, and empathetic communication.",
-      "Tracked student progress over time, adapting lesson plans to overcome learning challenges and drive positive academic outcomes."
+      "Diagnosed knowledge gaps and tailored lessons to each student.",
+      "Tracked progress over time and adjusted plans to improve comprehension and academic outcomes."
     ],
-    tech: ["Teaching", "Mentoring"]
+    tech: ["Teaching", "Mentoring", "Computer Science"]
   },
   {
     role: "STEM Instructor",
     company: "Envision Robotics STEM Education Inc.",
     date: "Dec 2024 - Mar 2025",
     location: "Markham, Ontario, Canada · On-site",
-    description: "Facilitated interactive STEM workshops for youth, translating complex robotics, 3D printing, and coding concepts into accessible lessons.",
+    description: "Volunteer instructor leading robotics, 3D-printing and intro coding workshops for youth groups of up to 20 students per session.",
     bullets: [
-      "Assessed individual learning styles and adjusted teaching methods dynamically to deliver tailored educational solutions.",
-      "Maintained and troubleshot technical equipment in real-time, preventing classroom disruptions.",
-      "Built rapport with students and parents through clear communication, fostering a supportive learning environment."
+      "Translated technical concepts into accessible lessons and adapted teaching methods to individual learners.",
+      "Maintained and troubleshot equipment in real time during live sessions to prevent disruptions.",
+      "Built rapport with students and parents through clear communication."
     ],
-    tech: ["Robotics", "3D Printing", "Python", "Coding"]
+    tech: ["Robotics", "3D Printing", "Coding", "Teaching"]
   }
 ];
 
@@ -116,9 +122,10 @@ function ExperienceModal({ exp, onClose }: { exp: ExperienceData; onClose: () =>
       >
         <button
           onClick={onClose}
+          aria-label="Close modal"
           className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white bg-white/5 rounded-full transition-colors"
         >
-          <X size={20} />
+          <X size={20} aria-hidden="true" />
         </button>
 
         <div className="mb-6">
@@ -173,20 +180,24 @@ export default function Experience({ hideTitle = false }: { hideTitle?: boolean 
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-linear-to-tr from-blue-600/10 to-purple-600/10 blur-[120px] rounded-full pointer-events-none animate-glow-pulse" />
 
-      <motion.div 
-        initial={{ opacity: 0, x: -20 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-        className={`flex flex-col items-start mb-10 ${hideTitle ? "hidden" : "lg:w-1/3 lg:sticky lg:top-32"}`}
-      >
-        <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
-          Experience
-        </h2>
-        <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-left">
-          Professional journey
-        </p>
-      </motion.div>
+      {hideTitle ? (
+        <h2 className="sr-only">Experience</h2>
+      ) : (
+        <motion.div 
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col items-start mb-10 lg:w-1/3 lg:sticky lg:top-32"
+        >
+          <h2 className="text-6xl md:text-8xl font-bold tracking-tighter text-left leading-none text-transparent bg-clip-text bg-linear-to-t from-white/20 via-white/80 to-white uppercase">
+            Experience
+          </h2>
+          <p className="text-blue-400 mt-4 text-sm md:text-base uppercase tracking-[0.3em] font-bold text-left">
+            Professional journey
+          </p>
+        </motion.div>
+      )}
 
       <div className="w-full">
         {/* Timeline Container */}
