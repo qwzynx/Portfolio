@@ -1,9 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  compress: true,
+  // Static export to out/, served as Cloudflare Workers static assets (see wrangler.jsonc)
+  output: "export",
   images: {
-    formats: ["image/avif", "image/webp"],
+    // No image optimization server in a static export; images in public/ are pre-compressed WebP
+    unoptimized: true,
   },
   experimental: {
     inlineCss: true,
