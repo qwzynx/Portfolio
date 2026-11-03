@@ -49,7 +49,7 @@ The source for [mahanghafarian.com](https://mahanghafarian.com) — a single-pag
 | Icons | [Lucide React](https://lucide.dev/), [React Icons](https://react-icons.github.io/react-icons/) |
 | Form backend | [FormSubmit](https://formsubmit.co/) (no custom backend/API routes) |
 | Linting | [ESLint](https://eslint.org/) (`eslint-config-next`) |
-| Deployment | [Vercel](https://vercel.com/) |
+| Deployment | [Cloudflare Workers](https://developers.cloudflare.com/workers/static-assets/) (static assets) |
 
 ---
 
@@ -85,8 +85,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser. The page ho
 | Command | Description |
 | --- | --- |
 | `npm run dev` | Start the Next.js development server |
-| `npm run build` | Create an optimized production build |
-| `npm run start` | Serve the production build (run `build` first) |
+| `npm run build` | Build the static export into `out/` |
+| `npm run preview` | Build, then serve `out/` locally through Wrangler, the same way Cloudflare serves it |
+| `npm run deploy` | Build, then deploy `out/` to Cloudflare (run `npx wrangler login` once first) |
 | `npm run lint` | Run ESLint over the project |
 
 ---
@@ -116,7 +117,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser. The page ho
 │   └── projects/               # Drop project screenshots here (see its README)
 ├── split-section-demo/         # Standalone static HTML/CSS layout experiment (see below)
 ├── package.json
-└── tsconfig.json
+├── tsconfig.json
+└── wrangler.jsonc            # Cloudflare Worker config (serves out/ as static assets)
 ```
 
 ---
