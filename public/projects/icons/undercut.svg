@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="12" fill="#0b1320"/>
+  <rect x="1" y="1" width="46" height="46" rx="11" stroke="#2563eb" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- Sleek Sports Car Profile -->
+  <path d="M10 28L13 22C14.5 19 18 17 22 17H28C32 17 34.5 18.5 37 22L40 28H10Z" 
+        fill="#1d4ed8" fill-opacity="0.2" stroke="#3b82f6" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- Wheels -->
+  <circle cx="16" cy="30" r="3.5" stroke="#60a5fa" stroke-width="2.2" fill="#0b1320"/>
+  <circle cx="33" cy="30" r="3.5" stroke="#60a5fa" stroke-width="2.2" fill="#0b1320"/>
+  <!-- Headlight Slash -->
+  <line x1="36" y1="23" x2="39" y2="25" stroke="#93c5fd" stroke-width="2" stroke-linecap="round"/>
+</svg>

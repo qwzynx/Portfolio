@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="12" fill="#1c0a10"/>
+  <rect x="1" y="1" width="46" height="46" rx="11" stroke="#ef4444" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- Graduation Cap Top -->
+  <polygon points="24,13 37,20 24,27 11,20" fill="#dc2626" fill-opacity="0.25" stroke="#ef4444" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Cap skull band -->
+  <path d="M16 23V29C16 32 20 34 24 34C28 34 32 32 32 29V23" stroke="#f87171" stroke-width="2" stroke-linecap="round"/>
+  <!-- Tassel -->
+  <path d="M34 21V29" stroke="#fca5a5" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="34" cy="30" r="1.5" fill="#fca5a5"/>
+</svg>

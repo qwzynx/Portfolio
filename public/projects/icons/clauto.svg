@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="12" fill="#1c140a"/>
+  <rect x="1" y="1" width="46" height="46" rx="11" stroke="#f59e0b" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- Terminal Command Prompt -->
+  <path d="M13 17L21 24L13 31" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="24" y1="31" x2="35" y2="31" stroke="#fbbf24" stroke-width="3" stroke-linecap="round"/>
+  <!-- Autopilot orbit node -->
+  <path d="M25 15C31 15 35 18 35 23" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-dasharray="3 2"/>
+  <circle cx="35" cy="23" r="2.5" fill="#fbbf24"/>
+</svg>

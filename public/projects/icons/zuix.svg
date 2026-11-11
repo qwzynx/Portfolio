@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="12" fill="#14110e"/>
+  <rect x="1" y="1" width="46" height="46" rx="11" stroke="#d4af37" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- ZUIX Architectural Roofline -->
+  <path d="M10 24L24 16L38 24" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- ZUIX Architectural Column & Monogram Z -->
+  <path d="M18 25H30L18 34H30" stroke="#f6e05e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

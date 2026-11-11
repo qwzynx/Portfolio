@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <rect width="48" height="48" rx="12" fill="#1c1008"/>
+  <rect x="1" y="1" width="46" height="46" rx="11" stroke="#f97316" stroke-opacity="0.35" stroke-width="1.5"/>
+  <!-- Rubber Duck Silhouette with HID / Cyber accent -->
+  <path d="M19 15C19 12.5 21 10.5 23.5 10.5C26 10.5 28 12.5 28 15C28 16 27.5 16.8 27 17.5L25 19H31C32.5 19 33 20 31.5 21L27 23C27 24 28 25 30 25C34 25 36 27 36 30C36 33.5 33 36 27 36C20 36 15 33 15 28C15 25 17 23 19 22L19 18C17 18 16 16.5 17 15.5C18 14.5 19 15 19 15Z" 
+        fill="#ea580c" fill-opacity="0.25" stroke="#f97316" stroke-width="2.2" stroke-linejoin="round"/>
+  <!-- Duck eye -->
+  <circle cx="23" cy="14" r="1.5" fill="#fde047"/>
+  <!-- Beak -->
+  <path d="M28 15L33 16L28 17.5" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
