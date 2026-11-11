@@ -3,18 +3,18 @@
 One 16:9 image per project, referenced by the `image` field in
 `app/components/projects.tsx` (e.g. `image: "/projects/zuix.webp"`).
 
-| Project                  | File                    | Concept / Visual Theme                                              |
-| ------------------------ | ----------------------- | ------------------------------------------------------------------- |
-| Clauto                   | `clauto.webp`           | Cybernetic command center with glowing 3D Kanban & git branch trees |
-| Trillium Pastry          | `trillium-pastry.webp`  | Artisanal multi-tier celebration cake with sugarcraft & warm bokeh  |
-| ZUIX INC.                | `zuix.webp`             | Luxury architectural residence with waterfall marble & blueprints   |
-| Anti-FOMO                | `anti-fomo.webp`        | Deep-space / cyberpunk opportunity scanner tracking tech signals    |
-| GradeMatrix              | `grade-matrix.webp`     | Crimson crystal matrix floating in a modern university atrium       |
-| Pico-Ducky 3.0           | `pico-ducky.webp`       | Macro cyber-hardware USB dongle with glowing circuitry & duck logo  |
-| Fretnote                 | `fretnote.webp`         | Moody guitar fretboard with glowing harmonic markers & chord charts |
-| opencode for Journalling | `opencode-journal.webp` | Nocturnal desk with journal radiating an Obsidian knowledge galaxy  |
-| Undercut                 | `undercut.webp`         | Midnight luxury sports car scanned by HUD deal-grading telemetry    |
-| FocusBox                 | `focusbox.webp`         | Precision matte black deep work lockbox with ambient timer ring     |
+| Project                  | File                    | Billboard Theme & Highlights                                       |
+| ------------------------ | ----------------------- | ------------------------------------------------------------------ |
+| Clauto                   | `clauto.webp`           | Minimalist command terminal billboard with amber git topology      |
+| Trillium Pastry          | `trillium-pastry.webp`  | Luxury artisanal cake billboard with emerald velvet & warm bokeh   |
+| ZUIX INC.                | `zuix.webp`             | Architectural design billboard with illuminated marble island      |
+| Anti-FOMO                | `anti-fomo.webp`        | Deep-sky opportunity radar billboard with cyan laser beam          |
+| GradeMatrix              | `grade-matrix.webp`     | Crimson ruby crystal matrix billboard with academic GPA telemetry  |
+| Pico-Ducky 3.0           | `pico-ducky.webp`       | Cyber-hardware security billboard with carbon-fiber & wireframe duck|
+| Fretnote                 | `fretnote.webp`         | Moody studio guitar billboard with harmonic fret illumination      |
+| opencode for Journalling | `opencode-journal.webp` | Nocturnal desk billboard with glowing purple knowledge neural net  |
+| Undercut                 | `undercut.webp`         | Midnight luxury sports coupe billboard emerging from deep shadow   |
+| FocusBox                 | `focusbox.webp`         | Matte black lockbox timer billboard with glowing warm amber ring   |
 
 To replace one, overwrite the file (or point `image` at a new one):
 
