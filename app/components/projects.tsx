@@ -10,17 +10,6 @@ import { HiExternalLink } from "react-icons/hi";
 // Set image to e.g. "/projects/zuix.webp"; empty string shows a gradient placeholder.
 const projects = [
   {
-    title: "Fretnote",
-    date: "Jul 2026 – Present",
-    description:
-      "A local-first songbook for guitarists, shipped from one codebase to Linux, Windows, macOS and Android. Chord sheets with auto-rendered diagrams, a fretboard tab editor, transposition with capo tracking, 8 tunings, a metronome and PDF export. No backend or account: everything lives in on-device SQLite, and a tag push builds every platform in CI.",
-    image: "/projects/fretnote.webp",
-    tech: ["Svelte 5", "TypeScript", "Tauri 2", "Rust", "SQLite", "GitHub Actions"],
-    gradient: "from-rose-500 to-pink-400",
-    github: "https://github.com/qwzynx/fretnote",
-    live: "https://fretnote-eight.vercel.app",
-  },
-  {
     title: "Clauto",
     date: "2026 – Present",
     description:
@@ -29,72 +18,6 @@ const projects = [
     tech: ["Node.js", "TypeScript", "Hono", "Svelte 5", "SQLite", "Electron", "PWA"],
     gradient: "from-amber-500 to-orange-400",
     github: "",
-    live: "",
-  },
-  {
-    title: "GradeMatrix",
-    date: "Mar 2026 – Present",
-    description:
-      "A full-stack grade tracker. Gemini parses a PDF syllabus into weighted assignments, and eClass Sync logs into York's portal with headless Playwright, streams Duo 2FA status live, and shows a diff of grade changes before anything is written. Dual-scale GPA (4.0 and 9.0), a target-grade planner, charts, row-level security, and built-in accessibility settings.",
-    image: "/projects/grade-matrix.webp",
-    tech: ["Next.js 16", "React 19", "TypeScript", "Supabase", "Gemini API", "Playwright"],
-    gradient: "from-purple-500 to-indigo-500",
-    github: "https://github.com/qwzynx/GradeCalc",
-    live: "https://grade-calc-nine.vercel.app",
-  },
-  {
-    title: "Anti-FOMO",
-    date: "Jun 2026 – Present",
-    description:
-      "Internships, tech news and events from 10 live sources (Hacker News, Simplify, Levels.fyi, Luma and more) in one ranked, offline-first feed. Rewritten from a Next.js + FastAPI service into a single Tauri app where scraping, ranking and storage all run on-device in Rust, with per-source caps and quiet degradation when a source breaks.",
-    image: "/projects/anti-fomo.webp",
-    tech: ["Tauri 2", "Svelte 5", "Rust", "SQLite"],
-    gradient: "from-sky-500 to-cyan-400",
-    github: "https://github.com/qwzynx/anti-fomo",
-    live: "",
-  },
-  {
-    title: "Pico-Ducky 3.0",
-    date: "May 2026",
-    description:
-      "A fork of pico-ducky that turns a Raspberry Pi Pico 2W into a USB Rubber Ducky-style HID device. I rewrote large parts of the DuckyScript 3.0 interpreter and its companion web app, reworked pin and board handling, and added my own payload extensions (~3,000 lines across ~28 files), then used it to study physical-access attacks and endpoint hardening in a lab.",
-    image: "/projects/pico-ducky.webp",
-    tech: ["Python", "CircuitPython", "Raspberry Pi Pico 2W", "HID"],
-    gradient: "from-red-500 to-orange-400",
-    github: "https://github.com/qwzynx/pico-ducky3.0",
-    live: "",
-  },
-  {
-    title: "ZUIX INC.",
-    date: "Sep 2024 – Jun 2026",
-    description:
-      "The first production website for a premium construction and renovation firm. A filterable project gallery with per-project pages, a site-wide estimate-request flow, and a password-protected admin dashboard with full CRUD, secured with HMAC-signed httpOnly session cookies. Runs on Edge API routes with continuous deployment.",
-    image: "/projects/zuix.webp",
-    tech: ["Next.js 16", "React 19", "Supabase", "Cloudflare Pages", "CSS"],
-    gradient: "from-blue-600 to-indigo-500",
-    github: "",
-    live: "https://zuix.ca/",
-  },
-  {
-    title: "Undercut",
-    date: "Jan 2026 – Feb 2026",
-    description:
-      "An AI used-car deal finder for the GTA that scrapes listings, calculates fair market value, grades deals S to F, flags red flags in seller descriptions with Gemini, and writes negotiation scripts. I led the front-end team in a group of 5, owning a library of 20+ accessible UI components and the shared type contract with the FastAPI backend.",
-    image: "/projects/undercut.webp",
-    tech: ["Next.js 14", "TypeScript", "FastAPI", "PostgreSQL", "Go", "Gemini"],
-    gradient: "from-blue-500 to-indigo-400",
-    github: "https://github.com/SoroushRF/Undercut",
-    live: "https://undercut-seven.vercel.app/",
-  },
-  {
-    title: "Phone-As-Webcam",
-    date: "Aug 2026",
-    description:
-      "Turns an iPhone into a Windows webcam with no app, cloud service or account. Safari streams peer-to-peer over WebRTC into OBS's Virtual Camera, with a WebSocket signaling relay, an auto-generated self-signed HTTPS cert for LAN camera access, and QR-code pairing in the terminal.",
-    image: "/projects/phone-as-webcam.webp",
-    tech: ["Node.js", "WebRTC", "WebSockets", "OBS Studio"],
-    gradient: "from-teal-500 to-cyan-400",
-    github: "https://github.com/qwzynx/Phone-As-Webcam",
     live: "",
   },
   {
@@ -109,26 +32,59 @@ const projects = [
     live: "https://trilliumpastry.ca",
   },
   {
-    title: "MG Studio",
-    date: "2026",
+    title: "ZUIX INC.",
+    date: "Sep 2024 – Jun 2026",
     description:
-      "My photo and video portfolio, built around a camera and cinema visual language: letterbox bars, a viewfinder HUD hero, film grain, photo collections as film canisters, and a video editing timeline. Includes a booking form, structured data and reduced-motion fallbacks.",
-    image: "/projects/mg-studio.webp",
-    tech: ["Next.js 16", "React 19", "TypeScript", "Framer Motion"],
-    gradient: "from-zinc-400 to-slate-500",
-    github: "https://github.com/qwzynx/studio",
-    live: "https://studio.mahanghafarian.com",
+      "The first production website for a premium construction and renovation firm. A filterable project gallery with per-project pages, a site-wide estimate-request flow, and a password-protected admin dashboard with full CRUD, secured with HMAC-signed httpOnly session cookies. Runs on Edge API routes with continuous deployment.",
+    image: "/projects/zuix.webp",
+    tech: ["Next.js 16", "React 19", "Supabase", "Cloudflare Pages", "CSS"],
+    gradient: "from-blue-600 to-indigo-500",
+    github: "",
+    live: "https://zuix.ca/",
   },
   {
-    title: "Course Tutors",
-    date: "Summer 2026",
+    title: "Anti-FOMO",
+    date: "Jun 2026 – Present",
     description:
-      "Two study apps I built for my own courses. Circuits Tutor (EECS 2200) has 10 lesson tracks, a 57-problem bank with tolerance-checked phasor answers, 4 interactive circuit simulators and Leitner flashcards. Logic Tutor (MATH 1090) covers 23 lessons with truth-table and proof drills and a timed mock exam. Both run fully client-side.",
-    image: "/projects/course-tutors.webp",
-    tech: ["Next.js 16", "React 19", "TypeScript", "KaTeX"],
-    gradient: "from-yellow-500 to-amber-400",
-    github: "",
+      "Internships, tech news and events from 10 live sources (Hacker News, Simplify, Levels.fyi, Luma and more) in one ranked, offline-first feed. Rewritten from a Next.js + FastAPI service into a single Tauri app where scraping, ranking and storage all run on-device in Rust, with per-source caps and quiet degradation when a source breaks.",
+    image: "/projects/anti-fomo.webp",
+    tech: ["Tauri 2", "Svelte 5", "Rust", "SQLite"],
+    gradient: "from-sky-500 to-cyan-400",
+    github: "https://github.com/qwzynx/anti-fomo",
     live: "",
+  },
+  {
+    title: "GradeMatrix",
+    date: "Mar 2026 – Present",
+    description:
+      "A full-stack grade tracker. Gemini parses a PDF syllabus into weighted assignments, and eClass Sync logs into York's portal with headless Playwright, streams Duo 2FA status live, and shows a diff of grade changes before anything is written. Dual-scale GPA (4.0 and 9.0), a target-grade planner, charts, row-level security, and built-in accessibility settings.",
+    image: "/projects/grade-matrix.webp",
+    tech: ["Next.js 16", "React 19", "TypeScript", "Supabase", "Gemini API", "Playwright"],
+    gradient: "from-purple-500 to-indigo-500",
+    github: "https://github.com/qwzynx/GradeCalc",
+    live: "https://grade-calc-nine.vercel.app",
+  },
+  {
+    title: "Pico-Ducky 3.0",
+    date: "May 2026",
+    description:
+      "A fork of pico-ducky that turns a Raspberry Pi Pico 2W into a USB Rubber Ducky-style HID device. I rewrote large parts of the DuckyScript 3.0 interpreter and its companion web app, reworked pin and board handling, and added my own payload extensions (~3,000 lines across ~28 files), then used it to study physical-access attacks and endpoint hardening in a lab.",
+    image: "/projects/pico-ducky.webp",
+    tech: ["Python", "CircuitPython", "Raspberry Pi Pico 2W", "HID"],
+    gradient: "from-red-500 to-orange-400",
+    github: "https://github.com/qwzynx/pico-ducky3.0",
+    live: "",
+  },
+  {
+    title: "Fretnote",
+    date: "Jul 2026 – Present",
+    description:
+      "A local-first songbook for guitarists, shipped from one codebase to Linux, Windows, macOS and Android. Chord sheets with auto-rendered diagrams, a fretboard tab editor, transposition with capo tracking, 8 tunings, a metronome and PDF export. No backend or account: everything lives in on-device SQLite, and a tag push builds every platform in CI.",
+    image: "/projects/fretnote.webp",
+    tech: ["Svelte 5", "TypeScript", "Tauri 2", "Rust", "SQLite", "GitHub Actions"],
+    gradient: "from-rose-500 to-pink-400",
+    github: "https://github.com/qwzynx/fretnote",
+    live: "https://fretnote-eight.vercel.app",
   },
   {
     title: "opencode for Journalling",
@@ -142,15 +98,15 @@ const projects = [
     live: "",
   },
   {
-    title: "FOMO",
-    date: "Apr 2026",
+    title: "Undercut",
+    date: "Jan 2026 – Feb 2026",
     description:
-      "The terminal predecessor to Anti-FOMO. Scrapes five news and event sources, scores items with weighted keyword tiers and time-proximity boosts, deep-scans embedded event JSON, and prints a ranked dashboard, deduplicated across runs in SQLite.",
-    image: "/projects/fomo.webp",
-    tech: ["Python", "BeautifulSoup4", "cloudscraper", "SQLite"],
-    gradient: "from-green-500 to-emerald-400",
-    github: "https://github.com/qwzynx/FOMO",
-    live: "",
+      "An AI used-car deal finder for the GTA that scrapes listings, calculates fair market value, grades deals S to F, flags red flags in seller descriptions with Gemini, and writes negotiation scripts. I led the front-end team in a group of 5, owning a library of 20+ accessible UI components and the shared type contract with the FastAPI backend.",
+    image: "/projects/undercut.webp",
+    tech: ["Next.js 14", "TypeScript", "FastAPI", "PostgreSQL", "Go", "Gemini"],
+    gradient: "from-blue-500 to-indigo-400",
+    github: "https://github.com/SoroushRF/Undercut",
+    live: "https://undercut-seven.vercel.app/",
   },
   {
     title: "FocusBox",
@@ -162,17 +118,6 @@ const projects = [
     gradient: "from-orange-500 to-yellow-400",
     github: "https://github.com/qwzynx/ENG1102",
     live: "",
-  },
-  {
-    title: "ENG 2003 Portfolio",
-    date: "Aug 2026",
-    description:
-      "A communication portfolio for Effective Engineering Communication at Lassonde: a Zero Trust IoT firmware report, two audience-tailored handouts, a cover letter and FocusBox hardware documentation, alongside reflective writing.",
-    image: "/projects/eng2003.webp",
-    tech: ["Vite", "HTML", "CSS", "JavaScript", "GitHub Pages"],
-    gradient: "from-violet-500 to-fuchsia-400",
-    github: "",
-    live: "https://eng2003.mahanghafarian.com",
   },
 ];
 
